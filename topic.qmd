@@ -1,6 +1,4 @@
 # Topic
 
-Pick some subset of the information covered in your annual review article that you are interested in exploring in more detail. 
-
-Identify the scope of your user guide - what will you cover? Specific software packages? When to use or not to use a specific technique?
+For my user guide, I'm going to provided a tutorial on calculating Fraction of Attributable Risk (FAR) and Risk Ratio (RR). These metrics are fundamental parts of Extreme Event Attribution (EEA). The significance of FAR and RR in climate science is that they are some of the primary metrics used to communicate climate risk to stakeholders.
 
