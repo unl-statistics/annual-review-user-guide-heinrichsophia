@@ -1,9 +1,21 @@
 # Needs Assessment {.appendix}
 
-What does someone trying to accomplish your chosen task need help with? 
+#### Guide Content
 
-What parts are likely to be tricky? 
+This user guide will cover how the metrics of Fraction of Attributable Risk (FAR) and Risk Ratio (RR) can be used as tools for determining the contribution of a causal factor to extreme events. More specifically, the guide will begin by giving background on the factual vs counterfactual setup where it defines two scenarios, one where a specific causal factor is present (p1) and one where it is absent (p0). It will then define the metrics of FAR and RR by giving step by step instructions for calculation RR and FAR. We will then explain how to interpret these metrics along with how to apply them to the theoretical framework of probability of necessary causation and the probability of sufficient causation. In a final application, the guide will show how to visualize the shifts in event probability between the factual and counterfactual world through the use of univariate density plots. These visuals will demonstrate how a causal factor shifts the distribution and changes the likelihood of extreme outcomes. Throughout this content, each topic/step will be explained generally and will also follow an application example for Extreme Event Attribution (as it relates to climate science) to show how these metrics translate to real-world decision-making.
 
-What resources are already available on this topic that may be helpful? Look for e.g. software vignettes, package documentation, papers about software packages, and so on.
+#### User Assumptions
 
+The primary users of this user guide are statisticians, data scientists, and risk analysts across various fields (e.g., climate science, epidemiology, or engineering) who need to quantify the influence of a specific factor on the occurrence of a rare event. The user guide assumes that readers have the following prerequisites:
 
+-   Understanding of basic probabilities: p = P(X \> u), where X is a random variable and u is a threshold value. Additionally, an understanding of random variables and probability distribution functions is needed.
+
+-   An interest in the logic/reasoning of "necessary" vs. "sufficient" causation.
+
+-   Basic knowledge of climate risk issues and themes of recent scientific findings in the last 20 years related to human effects on climate change.
+
+#### User Needs
+
+Ultimately, the user wants to provide a numerical answer to the question "How much did factor A increase the risk of event B?" where the numerical answer lies in the calculation and interpretation of FAR and RR. Someone trying to do this will first need help with understanding and following mathematical equations to calculate their metrics. After that, they will need guidance on interpreting FAR and RR through the lens of complex theoretical frameworks and how these interpretations can be communicated to stakeholders. When introducing new complex ideas, it will be important to make conscious design choices that will keep the user engaged and motivated to continue learning. Additionally, it will be important to caution users of requirements or restrictions of the data that these metrics are being applied to (e.g. sample size and distribution).
+
+There are a couple resources that can provide a more thorough background on some of the concepts covered. The first resource is the book *Causality: Models, Reasoning and Inference* by Judea Pearl which teaches the foundations of the underlying causality theory in the user guide. Additionally, the annual review article that inspired this user guide, "Statistical Methods for Extreme Event Attribution in Climate Science" by Naveau et al. also serves as an in-depth reference for applying FAR and RR to complex, dynamic systems.

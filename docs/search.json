@@ -1,0 +1,56 @@
+[
+  {
+    "objectID": "task-analysis.html",
+    "href": "task-analysis.html",
+    "title": "Appendix C — Task Analysis",
+    "section": "",
+    "text": "C.0.0.1 Task Prerequisites\nGiven that this is a user guide for calculating statistical metrics, FAR and RR, and interpreting them, the only prerequisites are knowledge ones as we will not be applying these concepts to any code. The knowledge prerequisites are:",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Task Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "guide.html",
+    "href": "guide.html",
+    "title": "1  User Guide",
+    "section": "",
+    "text": "First off, you should change this section title to something more appropriate.\nNext, well, that’s up to you. Good luck!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>User Guide</span>"
+    ]
+  },
+  {
+    "objectID": "topic.html",
+    "href": "topic.html",
+    "title": "Appendix A — Topic",
+    "section": "",
+    "text": "For my user guide, I’m going to provide a tutorial on calculating and communicating Fraction of Attributable Risk (FAR) and Risk Ratio (RR). These metrics are fundamental parts of Extreme Event Attribution (EEA). EEA aims to evalutate how anthropogenic forcings, like increased atmospheric greenhouse gases, affect the likelihood of specific extreme climate events. Along with calculations, the tutorial will include how these metrics can be used to visualize the shift in event probability between the factual and counterfactual world. Additionally, the tutorial will explain the significance of FAR and RR in climate science and how these metrics and visuals may be used to communicate the causality of human behaviors on the climate to decision-making stakeholders.\n\n\n\n\n\n\nNoteComments/suggestions\n\n\n\nOk. Make sure you connect them appropriately to the climate risk issue, and you may want to also look at different ways to visualize climate risk - Lace Padilla has some good stuff on that.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Topic</span>"
+    ]
+  },
+  {
+    "objectID": "needs.html",
+    "href": "needs.html",
+    "title": "Appendix B — Needs Assessment",
+    "section": "",
+    "text": "Guide Content\nThis user guide will cover how the metrics of Fraction of Attributable Risk (FAR) and Risk Ratio (RR) can be used as tools for determining the contribution of a causal factor to extreme events. More specifically, the guide will begin by giving background on the factual vs counterfactual setup where it defines two scenarios, one where a specific causal factor is present (p1) and one where it is absent (p0). It will then define the metrics of FAR and RR by giving step by step instructions for calculation RR and FAR. We will then explain how to interpret these metrics along with how to apply them to the theoretical framework of probability of necessary causation and the probability of sufficient causation. In a final application, the guide will show how to visualize the shifts in event probability between the factual and counterfactual world through the use of univariate density plots. These visuals will demonstrate how a causal factor shifts the distribution and changes the likelihood of extreme outcomes. Throughout this content, each topic/step will be explained generally and will also follow an application example for Extreme Event Attribution (as it relates to climate science) to show how these metrics translate to real-world decision-making.\nUser Assumptions\nThe primary users of this user guide are statisticians, data scientists, and risk analysts across various fields (e.g., climate science, epidemiology, or engineering) who need to quantify the influence of a specific factor on the occurrence of a rare event. The user guide assumes that readers have the following prerequisites:\n\nUnderstanding of basic probabilities: p = P(X &gt; u), where X is a random variable and u is a threshold value. Additionally, an understanding of random variables and probability distribution functions is needed.\nAn interest in the logic/reasoning of “necessary” vs. “sufficient” causation.\nBasic knowledge of climate risk issues and themes of recent scientific findings in the last 20 years related to human effects on climate change.\n\nUser Needs\nUltimately, the user wants to provide a numerical answer to the question “How much did factor A increase the risk of event B?” where the numerical answer lies in the calculation and interpretation of FAR and RR. Someone trying to do this will first need help with understanding and following mathematical equations to calculate their metrics. After that, they will need guidance on interpreting FAR and RR through the lens of complex theoretical frameworks and how these interpretations can be communicated to stakeholders. When introducing new complex ideas, it will be important to make conscious design choices that will keep the user engaged and motivated to continue learning. Additionally, it will be important to caution users of requirements or restrictions of the data that these metrics are being applied to (e.g. sample size and distribution).\nThere are a couple resources that can provide a more thorough background on some of the concepts covered. The first resource is the book Causality: Models, Reasoning and Inference by Judea Pearl which teaches the foundations of the underlying causality theory in the user guide. Additionally, the annual review article that inspired this user guide, “Statistical Methods for Extreme Event Attribution in Climate Science” by Naveau et al. also serves as an in-depth reference for applying FAR and RR to complex, dynamic systems.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Needs Assessment</span>"
+    ]
+  },
+  {
+    "objectID": "task-analysis.html#additional-guidance",
+    "href": "task-analysis.html#additional-guidance",
+    "title": "Appendix C — Task Analysis",
+    "section": "C.1 Additional Guidance",
+    "text": "C.1 Additional Guidance\nYour check-in should answer these basic questions (and similar concerns that apply more directly to your topic).\nOnce you’ve completed the check-in, you can use this section to jump-start an introduction/set-up/getting started section in your user guide. This document should remain as an appendix to your main report.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Task Analysis</span>"
+    ]
+  }
+]
