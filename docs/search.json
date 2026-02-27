@@ -84,7 +84,7 @@
     "href": "estimation.html",
     "title": "4  Probability Estimation",
     "section": "",
-    "text": "Instruction on choosing a method for estimating \\(p_1\\) (factual) and \\(p_0\\) (counterfactual).\nBriefly warn users about sample size requirements to ensure statistical validity.",
+    "text": "4.1 Select an Estimation Method\nOnce you have defined your event and threshold, you must estimate the probabilities of that event occurring in both the factual (\\(p_1\\)) and counterfactual (\\(p_0\\)) scenarios.\nChoose a statistical method to calculate the probabilities based on your data type and the rarity of the event:",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Probability Estimation</span>"
     ]
@@ -291,6 +291,26 @@
     "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "estimation.html#select-an-estimation-method",
+    "href": "estimation.html#select-an-estimation-method",
+    "title": "4  Probability Estimation",
+    "section": "",
+    "text": "Empirical Estimation: Use this for large datasets where you can simply count the number of times the variable \\(X\\) exceeds your threshold \\(u\\).\nParametric Modeling: Fit a specific distribution (such as the Generalized Pareto Distribution used in EVT) to your data to estimate probabilities for extremely rare events that may not appear frequently in your historical record.\nClimate Model Ensembles: If using modeled data, calculate the frequency of the event across multiple simulations to derive \\(p_1\\) and \\(p_0\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Probability Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "estimation.html#estimate-p_1-and-p_0",
+    "href": "estimation.html#estimate-p_1-and-p_0",
+    "title": "4  Probability Estimation",
+    "section": "4.2 Estimate \\(p_1\\) and \\(p_0\\)",
+    "text": "4.2 Estimate \\(p_1\\) and \\(p_0\\)\nApply your chosen estimation method to both datasets:\n\nCalculate \\(p_1\\): Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).\nCalculate \\(p_0\\): Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).\n\n\n\n\n\n\n\nWarningSample Size Requirements\n\n\n\nEnsure your datasets are large enough to provide statistical validity. Small sample sizes for rare events can lead to high uncertainty and wide confidence intervals, which may make your final attribution metrics unreliable.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Probability Estimation</span>"
     ]
   }
 ]

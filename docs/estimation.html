@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./calculation.html" rel="next">
-<link href="./scope.html" rel="prev">
+<link href="./event.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -158,8 +158,8 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./scope.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Scope</span></span></a>
+  <a href="./event.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Event</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,8 +232,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#select-an-estimation-method" id="toc-select-an-estimation-method" class="nav-link active" data-scroll-target="#select-an-estimation-method"><span class="header-section-number">4.1</span> Select an Estimation Method</a></li>
+  <li><a href="#estimate-p_1-and-p_0" id="toc-estimate-p_1-and-p_0" class="nav-link" data-scroll-target="#estimate-p_1-and-p_0"><span class="header-section-number">4.2</span> Estimate <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -263,10 +270,39 @@ window.Quarto = {
 </header>
 
 
-<p>Instruction on choosing a method for estimating <span class="math inline">\(p_1\)</span> (factual) and <span class="math inline">\(p_0\)</span> (counterfactual).</p>
-<p>Briefly warn users about sample size requirements to ensure statistical validity.</p>
+<p>Once you have defined your event and threshold, you must estimate the probabilities of that event occurring in both the factual (<span class="math inline">\(p_1\)</span>) and counterfactual (<span class="math inline">\(p_0\)</span>) scenarios.</p>
+<section id="select-an-estimation-method" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="select-an-estimation-method"><span class="header-section-number">4.1</span> Select an Estimation Method</h2>
+<p>Choose a statistical method to calculate the probabilities based on your data type and the rarity of the event:</p>
+<ul>
+<li><p><strong>Empirical Estimation</strong>: Use this for large datasets where you can simply count the number of times the variable <span class="math inline">\(X\)</span> exceeds your threshold <span class="math inline">\(u\)</span>.</p></li>
+<li><p><strong>Parametric Modeling</strong>: Fit a specific distribution (such as the Generalized Pareto Distribution used in EVT) to your data to estimate probabilities for extremely rare events that may not appear frequently in your historical record.</p></li>
+<li><p><strong>Climate Model Ensembles</strong>: If using modeled data, calculate the frequency of the event across multiple simulations to derive <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span>.</p></li>
+</ul>
+</section>
+<section id="estimate-p_1-and-p_0" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="estimate-p_1-and-p_0"><span class="header-section-number">4.2</span> Estimate <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span></h2>
+<p>Apply your chosen estimation method to both datasets:</p>
+<ol type="1">
+<li><p><strong>Calculate</strong> <span class="math inline">\(p_1\)</span>: Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).</p></li>
+<li><p><strong>Calculate</strong> <span class="math inline">\(p_0\)</span>: Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).</p></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Sample Size Requirements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensure your datasets are large enough to provide statistical validity. Small sample sizes for rare events can lead to high uncertainty and wide confidence intervals, which may make your final attribution metrics unreliable.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -671,8 +707,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./scope.html" class="pagination-link" aria-label="Defining the Scope">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Scope</span></span>
+      <a href="./event.html" class="pagination-link" aria-label="Defining the Event">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Event</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

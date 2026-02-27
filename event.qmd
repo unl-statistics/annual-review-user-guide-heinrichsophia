@@ -1,7 +1,6 @@
 # Defining the Event
 
 ::: callout-note
-## Note
 
 In this guide, we will primarily use examples of extreme events related to climate science. However, this framework can be applied to extreme events in other fields, such as epidemiology.
 :::

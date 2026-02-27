@@ -1,5 +1,27 @@
 # Probability Estimation
 
-Instruction on choosing a method for estimating $p_1$ (factual) and $p_0$ (counterfactual).
+Once you have defined your event and threshold, you must estimate the probabilities of that event occurring in both the factual ($p_1$) and counterfactual ($p_0$) scenarios.
 
-Briefly warn users about sample size requirements to ensure statistical validity.
+## Select an Estimation Method
+
+Choose a statistical method to calculate the probabilities based on your data type and the rarity of the event:
+
+-   **Empirical Estimation**: Use this for large datasets where you can simply count the number of times the variable $X$ exceeds your threshold $u$.
+
+-   **Parametric Modeling**: Fit a specific distribution (such as the Generalized Pareto Distribution used in EVT) to your data to estimate probabilities for extremely rare events that may not appear frequently in your historical record.
+
+-   **Climate Model Ensembles**: If using modeled data, calculate the frequency of the event across multiple simulations to derive $p_1$ and $p_0$.
+
+## Estimate $p_1$ and $p_0$
+
+Apply your chosen estimation method to both datasets:
+
+1.  **Calculate** $p_1$: Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).
+
+2.  **Calculate** $p_0$: Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).
+
+::: callout-warning
+## Sample Size Requirements
+
+Ensure your datasets are large enough to provide statistical validity. Small sample sizes for rare events can lead to high uncertainty and wide confidence intervals, which may make your final attribution metrics unreliable.
+:::
