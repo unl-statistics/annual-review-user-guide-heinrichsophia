@@ -62,21 +62,21 @@
   {
     "objectID": "scope.html",
     "href": "scope.html",
-    "title": "3  Defining the Scope",
+    "title": "3  Defining the Event",
     "section": "",
-    "text": "3.1 Threshold Selection (u)\nHow to set a benchmark for “rare” while balancing confidence intervals.",
+    "text": "3.1 Threshold Selection (u)\nBefore you begin your statistical analysis, you must clearly define the event you are studying. This involves making two critical decisions: setting a threshold for what constitutes an “extreme” event and determining any defining boundaries of that event (e.g., geographic location and time span).\nHow to set a benchmark for “rare” while balancing confidence intervals.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Scope</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
   },
   {
     "objectID": "scope.html#spatiotemporal-scaling",
     "href": "scope.html#spatiotemporal-scaling",
-    "title": "3  Defining the Scope",
+    "title": "3  Defining the Event",
     "section": "3.2 Spatiotemporal Scaling",
     "text": "3.2 Spatiotemporal Scaling\nGuidance on defining the event in terms of time and geography (e.g., single day vs. three-month continental scale).",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Scope</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
   },
   {
@@ -201,6 +201,96 @@
     "text": "Basic Probability: Understanding the formula \\(p = P(X &gt; u)\\), where \\(p\\) represents the probability of a random variable \\(X\\) exceeding a specific threshold \\(u\\).\nDistribution Functions: Familiarity with how data is distributed and how to identify different distribution models.\nClimate Risk: General awareness of recent developments and findings in climate change risks.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preparation & Prerequisites</span>"
+    ]
+  },
+  {
+    "objectID": "event.html",
+    "href": "event.html",
+    "title": "3  Defining the Event",
+    "section": "",
+    "text": "3.1 Selecting an Event\nBefore applying any statistical models, you must first identify the specific extreme event you wish to study. This selection should be driven by both the available data and the specific question you want to answer for your stakeholders.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#spatiotemporal-scaling",
+    "href": "event.html#spatiotemporal-scaling",
+    "title": "3  Defining the Event",
+    "section": "3.2 Spatiotemporal Scaling",
+    "text": "3.2 Spatiotemporal Scaling\nGuidance on defining the event in terms of time and geography (e.g., single day vs. three-month continental scale).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#boundaries",
+    "href": "event.html#boundaries",
+    "title": "3  Defining the Event",
+    "section": "3.3 Boundaries",
+    "text": "3.3 Boundaries\nDefine the specific limits of the event to ensure your analysis is contained and reproducible.\n\nTemporal Duration: Define the time window for the event (e.g., a 24-hour peak vs. a 3-month seasonal average).\nSpatial Extent: Determine the geographic boundaries, such as a specific postal code, a watershed, or a continental region.\nMaintain Consistency: Apply these exact boundaries to both your factual and counterfactual datasets to ensure a valid comparison.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#threshold-selection-u",
+    "href": "event.html#threshold-selection-u",
+    "title": "3  Defining the Event",
+    "section": "3.2 Threshold Selection (\\(u\\))",
+    "text": "3.2 Threshold Selection (\\(u\\))\nOnce you have selected the type of event, you must set a benchmark for what qualifies as “rare”:\n\nIdentify the Benchmark: Choose a value (\\(u\\)) such that any observation \\(X &gt; u\\) is considered an extreme occurrence. (e.g., rainfall in North America over 4 hours \\(&gt;\\) 10 inches)\nBalance Your Data: Avoid setting \\(u\\) so high that you lack enough data points for statistical validity, but keep it high enough to remain in the “tail” of the distribution.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#sep-2-threshold-selection-u",
+    "href": "event.html#sep-2-threshold-selection-u",
+    "title": "3  Defining the Event",
+    "section": "3.2 Sep 2: Threshold Selection (\\(u\\))",
+    "text": "3.2 Sep 2: Threshold Selection (\\(u\\))\nHow to set a benchmark for “rare” while balancing confidence intervals.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#step-3-boundaries",
+    "href": "event.html#step-3-boundaries",
+    "title": "3  Defining the Event",
+    "section": "3.3 Step 3: Boundaries",
+    "text": "3.3 Step 3: Boundaries\nGuidance on defining the event in terms of time and geography (e.g., single day vs. three-month continental scale).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#step-1-selecting-an-event",
+    "href": "event.html#step-1-selecting-an-event",
+    "title": "3  Defining the Event",
+    "section": "",
+    "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#step-2-threshold-selection-u",
+    "href": "event.html#step-2-threshold-selection-u",
+    "title": "3  Defining the Event",
+    "section": "3.2 Step 2: Threshold Selection (\\(u\\))",
+    "text": "3.2 Step 2: Threshold Selection (\\(u\\))\nOnce you have selected the type of event, you must set a benchmark for what qualifies as “rare”:\n\nIdentify the Benchmark: Choose a value (\\(u\\)) such that any observation \\(X &gt; u\\) is considered an extreme occurrence.\nBalance Your Data: Avoid setting \\(u\\) so high that you lack enough data points for statistical validity, but keep it high enough to remain in the “tail” of the distribution.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
+    ]
+  },
+  {
+    "objectID": "event.html#selecting-an-event",
+    "href": "event.html#selecting-an-event",
+    "title": "3  Defining the Event",
+    "section": "",
+    "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
   }
 ]

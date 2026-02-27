@@ -16,7 +16,7 @@ book:
     - index.qmd # Remove this before you submit your final report!
     - guide.qmd
     - prep.qmd
-    - scope.qmd
+    - event.qmd
     - estimation.qmd
     - calculation.qmd
     - theoretical.qmd

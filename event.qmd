@@ -1,0 +1,35 @@
+# Defining the Event
+
+::: callout-note
+## Note
+
+In this guide, we will primarily use examples of extreme events related to climate science. However, this framework can be applied to extreme events in other fields, such as epidemiology.
+:::
+
+## Selecting an Event
+
+Before applying any statistical models, you must first identify the specific extreme event you wish to study. This selection should be driven by both the available data and the specific question you want to answer for your stakeholders.
+
+-   **Identify the Hazard**: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.
+
+-   **Verify Data Availability**: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.
+
+-   **Determine Stakeholder Needs**: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.
+
+## Threshold Selection ($u$)
+
+Once you have selected the type of event, you must set a benchmark for what qualifies as "rare":
+
+-   **Identify the Benchmark**: Choose a value ($u$) such that any observation $X > u$ is considered an extreme occurrence. (e.g., rainfall in North America over 4 hours $>$ 10 inches)
+
+-   **Balance Your Data**: Avoid setting $u$ so high that you lack enough data points for statistical validity, but keep it high enough to remain in the "tail" of the distribution.
+
+## Boundaries
+
+Define the specific limits of the event to ensure your analysis is contained and reproducible.
+
+-   **Temporal Duration**: Define the time window for the event (e.g., a 24-hour peak vs. a 3-month seasonal average).
+
+-   **Spatial Extent**: Determine the geographic boundaries, such as a specific postal code, a watershed, or a continental region.
+
+-   **Maintain Consistency**: Apply these exact boundaries to both your **factual** and **counterfactual** datasets to ensure a valid comparison.
