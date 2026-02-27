@@ -1,0 +1,5 @@
+# Troubleshooting & Evaluation
+
+Self-Check List: A set of "Follow-up Questions" for the user (e.g., Is the threshold high enough? Is the distribution model honest?).
+
+Product Evaluation: Criteria to ensure the final conclusion correctly distinguishes between necessary and sufficient causes.

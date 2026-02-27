@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-25">
+<meta name="dcterms.date" content="2026-02-27">
 
-<title>Appendix B — Needs Assessment – User Guide: Annual Review Article Topic</title>
+<title>Appendix B — Needs Assessment – How to Calculate and Communicate Extreme Event Attribution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">User Guide: Annual Review Article Topic</a> 
+      <a href="./">How to Calculate and Communicate Extreme Event Attribution</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -118,7 +118,49 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./guide.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparation &amp; Prerequisites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Scope</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Probability Estimation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Calculating FAR &amp; RR</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./theoretical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Theoretical Causal Framework</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visuals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Troubleshooting &amp; Evaluation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -180,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 25, 2026</p>
+      <p class="date">February 27, 2026</p>
     </div>
   </div>
   
@@ -192,20 +234,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Guide Content</strong></p>
+<section id="guide-content" class="level4" data-number="B.0.0.1">
+<h4 data-number="B.0.0.1" class="anchored" data-anchor-id="guide-content"><span class="header-section-number">B.0.0.1</span> Guide Content</h4>
 <p>This user guide will cover how the metrics of Fraction of Attributable Risk (FAR) and Risk Ratio (RR) can be used as tools for determining the contribution of a causal factor to extreme events. More specifically, the guide will begin by giving background on the factual vs counterfactual setup where it defines two scenarios, one where a specific causal factor is present (p1) and one where it is absent (p0). It will then define the metrics of FAR and RR by giving step by step instructions for calculation RR and FAR. We will then explain how to interpret these metrics along with how to apply them to the theoretical framework of probability of necessary causation and the probability of sufficient causation. In a final application, the guide will show how to visualize the shifts in event probability between the factual and counterfactual world through the use of univariate density plots. These visuals will demonstrate how a causal factor shifts the distribution and changes the likelihood of extreme outcomes. Throughout this content, each topic/step will be explained generally and will also follow an application example for Extreme Event Attribution (as it relates to climate science) to show how these metrics translate to real-world decision-making.</p>
-<p><strong>User Assumptions</strong></p>
+</section>
+<section id="user-assumptions" class="level4" data-number="B.0.0.2">
+<h4 data-number="B.0.0.2" class="anchored" data-anchor-id="user-assumptions"><span class="header-section-number">B.0.0.2</span> User Assumptions</h4>
 <p>The primary users of this user guide are statisticians, data scientists, and risk analysts across various fields (e.g., climate science, epidemiology, or engineering) who need to quantify the influence of a specific factor on the occurrence of a rare event. The user guide assumes that readers have the following prerequisites:</p>
 <ul>
 <li><p>Understanding of basic probabilities: p = P(X &gt; u), where X is a random variable and u is a threshold value. Additionally, an understanding of random variables and probability distribution functions is needed.</p></li>
 <li><p>An interest in the logic/reasoning of “necessary” vs.&nbsp;“sufficient” causation.</p></li>
 <li><p>Basic knowledge of climate risk issues and themes of recent scientific findings in the last 20 years related to human effects on climate change.</p></li>
 </ul>
-<p><strong>User Needs</strong></p>
+</section>
+<section id="user-needs" class="level4" data-number="B.0.0.3">
+<h4 data-number="B.0.0.3" class="anchored" data-anchor-id="user-needs"><span class="header-section-number">B.0.0.3</span> User Needs</h4>
 <p>Ultimately, the user wants to provide a numerical answer to the question “How much did factor A increase the risk of event B?” where the numerical answer lies in the calculation and interpretation of FAR and RR. Someone trying to do this will first need help with understanding and following mathematical equations to calculate their metrics. After that, they will need guidance on interpreting FAR and RR through the lens of complex theoretical frameworks and how these interpretations can be communicated to stakeholders. When introducing new complex ideas, it will be important to make conscious design choices that will keep the user engaged and motivated to continue learning. Additionally, it will be important to caution users of requirements or restrictions of the data that these metrics are being applied to (e.g.&nbsp;sample size and distribution).</p>
 <p>There are a couple resources that can provide a more thorough background on some of the concepts covered. The first resource is the book <em>Causality: Models, Reasoning and Inference</em> by Judea Pearl which teaches the foundations of the underlying causality theory in the user guide. Additionally, the annual review article that inspired this user guide, “Statistical Methods for Extreme Event Attribution in Climate Science” by Naveau et al.&nbsp;also serves as an in-depth reference for applying FAR and RR to complex, dynamic systems.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -624,7 +672,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2025, Author Name</p>
+<p>Copyright 2026, Sohia Heinrich</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

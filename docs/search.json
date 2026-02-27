@@ -1,23 +1,142 @@
 [
   {
-    "objectID": "task-analysis.html",
-    "href": "task-analysis.html",
-    "title": "Appendix C — Task Analysis",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "How to Calculate and Communicate Extreme Event Attribution",
     "section": "",
-    "text": "C.0.0.1 Task Prerequisites\nGiven that this is a user guide for calculating statistical metrics, FAR and RR, and interpreting them, the only prerequisites are knowledge ones as we will not be applying these concepts to any code. The knowledge prerequisites are:",
+    "text": "Assignment Flow\nThis project is set up to scaffold this user guide and set you up for success.\nStart at topic.qmd and identify a topic for your user guide.\nOnce you’ve proposed a topic and received my approval/feedback, you can convert the contents of topic.qmd into an introductory paragraph in your report. Please leave the topic.qmd file as an appendix, to document the different stages of this project.\nOnce we’ve agreed on a topic for your user guide, you will proceed to needs.qmd and task-analysis.qmd. Both will be submitted at the same check-in, and both will be included in your final report as appendices. You should be able to re-purpose most of the information in task-analysis.qmd to orient the user to different components of the task you’ve chosen.\nYour next step is to actually write the content that satisfies the work you outlined in task-analysis.qmd.\nOnce you’re finished with that, ideally, you’ll have plenty of time to edit and streamline your report. Feel free to trade reports with a friend and try to complete your friend’s task - this will help you both identify areas where the guide isn’t as clear. Try to complete the task with a different data set - that often helps find trouble spots.\nWhen you submit your final report, you may remove index.qmd from the _quarto.yml file, which will remove this chapter (which is quite unnecessary for your user) from the report. You should also take the time to make sure your name is listed as both author and copyright holder in the _quarto.yml file. Feel free to make a custom cover for your manual if you would like to do so. You can also tweak the CSS/theme for the book, so long as you’re conscious of accessibility concerns.\n\n\n\n\n\n\nCautionBuilding the report\n\n\n\nIf you are using RStudio to complete this report, you can hit (Ctrl/Cmd)-Shift-B to build the whole report. You can also type quarto render . on the command line in the project folder to accomplish the same thing.\nIf you have questions about how to customize or debug your book, it may be helpful to start at the quarto book documentation (Posit PBC 2024).\n\n\n\n\n\n\nPosit PBC. 2024. “Creating a Book. Quarto.” July 1, 2024. https://quarto.org/docs/books/.",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Task Analysis</span>"
+      "Assignment Flow"
     ]
   },
   {
     "objectID": "guide.html",
     "href": "guide.html",
-    "title": "1  User Guide",
+    "title": "1  Introduction",
     "section": "",
-    "text": "First off, you should change this section title to something more appropriate.\nNext, well, that’s up to you. Good luck!",
+    "text": "1.1 Key Terms\nThis user guide provides step by step instructions on how to calculate and communicate Fraction of Attributable Risk (FAR) and Risk Ratio (RR). These metrics are fundamental parts of Extreme Event Attribution (EEA). EEA aims to evaluate how human-induced changes in Earth’s state, like increased atmospheric greenhouse gases, affect the likelihood of extreme climate events. Along with calculations, this guide will show how these metrics can be used to visualize the shift in event probability between the factual and counterfactual world. Additionally, the tutorial will explain the significance of FAR and RR in climate science and how these metrics and visuals may be used to communicate the causality of human behaviors on the climate to decision-making stakeholders.\nBy utilizing these metrics, you can provide a numerical answer to the question: “How much did a specific factor increase the risk of an event?”",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>User Guide</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "guide.html#learning-objectives",
+    "href": "guide.html#learning-objectives",
+    "title": "1  Introduction",
+    "section": "1.2 Learning Objectives",
+    "text": "1.2 Learning Objectives\nBy the end of this guide, you will be able to:\n\nDefine and scope an event by selecting appropriate thresholds (\\(u\\)) and spatiotemporal scales for analysis.\nCalculate Fraction of Attributable Risk (FAR) and Risk Ratio (RR).\nInterpret FAR and RR within the framework of Necessary vs. Sufficient causation.\nVisualize metrics by creating univariate density plots to demonstrate how a causal factor shifts the probability distribution of an event.\nTranslate statistical outputs into conclusions that inform real-world decision-making.\n\n\n\n\n\nFerreira, Rebeka. 2023. “Necessary and Sufficient Conditions.” In How to Think for Yourself. Open Washington Pressbooks. https://openwa.pressbooks.pub/howtothinkforyourself/chapter/%c2%a72-necessary-and-sufficient-conditions/.\n\n\nNaveau, Philippe, Alexis Hannart, and Aurélien Ribes. 2020. “Statistical Methods for Extreme Event Attribution in Climate Science.” Annual Review of Statistics and Its Application 7 (January): 89–110. https://doi.org/10.1146/annurev-statistics-031219-041314.\n\n\n“Spatiotemporal Scale → Area → Sustainability. Sustainability Directory.” 2024. 2024. https://lifestyle.sustainability-directory.com/area/spatiotemporal-scale/.\n\n\n“What Is Extreme Value Theory? Certificate in Quantitiative Finance.” 2026. 2026. https://www.cqf.com/blog/quant-finance-101/what-is-extreme-value-theory.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "guide.html#key-terms",
+    "href": "guide.html#key-terms",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Extreme Event Attribution (EEA): “EEA aims to evaluate how the likelihood of a specific extreme climate event (e.g. a major drought) has been affected by human activities, such as the increase of greenhouse gas concentrations associated with fossil fuel burning,” (Naveau, Hannart, and Ribes 2020).\nCausal Inference: the mathematical and logical framework used to determine if a specific change in one variable is directly responsible for a change in another.\nFactual vs Counterfactual Framework: To determine if a specific factor caused a change in an event, we compare two distinct scenarios:\n\nFactual Scenario (\\(p_1\\)): The “observed” world. This scenario includes all existing conditions and the specific causal factor being studied.\nCounterfactual Scenario (\\(p_0\\)): The “what if” world. This scenario is identical to the factual one, except the specific causal factor is removed.\n\n(Naveau, Hannart, and Ribes 2020)\nNecessary vs. Sufficient Causation: A necessary cause must be present for an effect to occur (e.g., fuel is necessary for a fire), but it does not guarantee the effect. A sufficient cause guarantees the effect will occur (e.g., a lit match in a gas-filled room), but it may not be the only way to cause that effect (Ferreira 2023).\nSpatiotemporal Scale: The combination of spatial extent (geographic area) and temporal duration (time period) at which environmental phenomena occur, are studied, or are addressed by policy (“Spatiotemporal Scale → Area → Sustainability. Sustainability Directory” 2024).\nExtreme Value Theory (EVT): “A statistical approach that focuses on analyzing extreme events or values in data, rather than assuming a normal or symmetric distribution. It provides a framework for understanding and modeling the behavior of extreme values that exceed a certain threshold,” (“What Is Extreme Value Theory? Certificate in Quantitiative Finance” 2026).\nFraction of Attributable Risk (FAR): a metric used to estimate the proportion of an observed event’s risk that can be linked to a specific causal factor. It is mathematically expressed as \\(FAR = 1 - (p_0 / p_1)\\) (Naveau, Hannart, and Ribes 2020).\nRisk Ratio (RR): a metric used to compare the probability of of an event occurring in two different scenarios to determine how much a specific factor has increased or decreased the likelihood of that event. It is mathematically expressed as \\(RR = p_1 / p_0\\) (Naveau, Hannart, and Ribes 2020).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "prep.html",
+    "href": "prep.html",
+    "title": "2  Preparation & Prerequisites",
+    "section": "",
+    "text": "2.1 Knowledge Assumptions\nList the required knowledge in basic probability (\\(p = P(X &gt; u)\\)), distribution functions, and recent climate risk findings.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preparation & Prerequisites</span>"
+    ]
+  },
+  {
+    "objectID": "prep.html#data-requirements",
+    "href": "prep.html#data-requirements",
+    "title": "2  Preparation & Prerequisites",
+    "section": "2.2 Data Requirements",
+    "text": "2.2 Data Requirements\nExplain the necessity of having data for the same random variable (X) across two scenarios.\nGuidance on Distribution: Mention why Extreme Value Theory (EVT) is preferred for heavy-tailed “rare” events over normal distributions.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preparation & Prerequisites</span>"
+    ]
+  },
+  {
+    "objectID": "scope.html",
+    "href": "scope.html",
+    "title": "3  Defining the Scope",
+    "section": "",
+    "text": "3.1 Threshold Selection (u)\nHow to set a benchmark for “rare” while balancing confidence intervals.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Scope</span>"
+    ]
+  },
+  {
+    "objectID": "scope.html#spatiotemporal-scaling",
+    "href": "scope.html#spatiotemporal-scaling",
+    "title": "3  Defining the Scope",
+    "section": "3.2 Spatiotemporal Scaling",
+    "text": "3.2 Spatiotemporal Scaling\nGuidance on defining the event in terms of time and geography (e.g., single day vs. three-month continental scale).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Scope</span>"
+    ]
+  },
+  {
+    "objectID": "estimation.html",
+    "href": "estimation.html",
+    "title": "4  Probability Estimation",
+    "section": "",
+    "text": "Instruction on choosing a method for estimating \\(p_1\\) (factual) and \\(p_0\\) (counterfactual).\nBriefly warn users about sample size requirements to ensure statistical validity.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Probability Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "calculation.html",
+    "href": "calculation.html",
+    "title": "5  Calculating FAR & RR",
+    "section": "",
+    "text": "Risk Ratio (RR): Formula and step-by-step calculation instructions.\nFraction of Attributable Risk (FAR): Formula and step-by-step calculation instructions.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Calculating FAR & RR</span>"
+    ]
+  },
+  {
+    "objectID": "theoretical.html",
+    "href": "theoretical.html",
+    "title": "6  Theoretical Causal Framework",
+    "section": "",
+    "text": "Probability of Necessary Causation (PN): Interpreting if the event would have happened without the causal factor.\nProbability of Sufficient Causation (PS): Interpreting if the factor alone was enough to trigger the event.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Theoretical Causal Framework</span>"
+    ]
+  },
+  {
+    "objectID": "visuals.html",
+    "href": "visuals.html",
+    "title": "7  Visualization & Communication",
+    "section": "",
+    "text": "Visualizing Probability Shifts: Tutorial on using univariate density plots to show how a causal factor shifts the distribution.\nStakeholder Communication: Best practices for translating these metrics into real-world decision-making narratives.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization & Communication</span>"
+    ]
+  },
+  {
+    "objectID": "troubleshooting.html",
+    "href": "troubleshooting.html",
+    "title": "8  Troubleshooting & Evaluation",
+    "section": "",
+    "text": "Self-Check List: A set of “Follow-up Questions” for the user (e.g., Is the threshold high enough? Is the distribution model honest?).\nProduct Evaluation: Criteria to ensure the final conclusion correctly distinguishes between necessary and sufficient causes.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting & Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Naveau, Philippe, Alexis Hannart, and Aurélien Ribes. 2020.\n“Statistical Methods for Extreme Event Attribution in Climate\nScience.” Annual Review of Statistics and Its\nApplication 7 (January): 89–110. https://doi.org/10.1146/annurev-statistics-031219-041314.\n\n\nPosit PBC. 2024. “Creating a Book. Quarto.” July 1, 2024.\nhttps://quarto.org/docs/books/.\n\n\n“Spatiotemporal Scale → Area → Sustainability. Sustainability\nDirectory.” n.d. Accessed February 27, 2026. https://lifestyle.sustainability-directory.com/area/spatiotemporal-scale/.",
+    "crumbs": [
+      "References"
     ]
   },
   {
@@ -36,10 +155,21 @@
     "href": "needs.html",
     "title": "Appendix B — Needs Assessment",
     "section": "",
-    "text": "Guide Content\nThis user guide will cover how the metrics of Fraction of Attributable Risk (FAR) and Risk Ratio (RR) can be used as tools for determining the contribution of a causal factor to extreme events. More specifically, the guide will begin by giving background on the factual vs counterfactual setup where it defines two scenarios, one where a specific causal factor is present (p1) and one where it is absent (p0). It will then define the metrics of FAR and RR by giving step by step instructions for calculation RR and FAR. We will then explain how to interpret these metrics along with how to apply them to the theoretical framework of probability of necessary causation and the probability of sufficient causation. In a final application, the guide will show how to visualize the shifts in event probability between the factual and counterfactual world through the use of univariate density plots. These visuals will demonstrate how a causal factor shifts the distribution and changes the likelihood of extreme outcomes. Throughout this content, each topic/step will be explained generally and will also follow an application example for Extreme Event Attribution (as it relates to climate science) to show how these metrics translate to real-world decision-making.\nUser Assumptions\nThe primary users of this user guide are statisticians, data scientists, and risk analysts across various fields (e.g., climate science, epidemiology, or engineering) who need to quantify the influence of a specific factor on the occurrence of a rare event. The user guide assumes that readers have the following prerequisites:\n\nUnderstanding of basic probabilities: p = P(X &gt; u), where X is a random variable and u is a threshold value. Additionally, an understanding of random variables and probability distribution functions is needed.\nAn interest in the logic/reasoning of “necessary” vs. “sufficient” causation.\nBasic knowledge of climate risk issues and themes of recent scientific findings in the last 20 years related to human effects on climate change.\n\nUser Needs\nUltimately, the user wants to provide a numerical answer to the question “How much did factor A increase the risk of event B?” where the numerical answer lies in the calculation and interpretation of FAR and RR. Someone trying to do this will first need help with understanding and following mathematical equations to calculate their metrics. After that, they will need guidance on interpreting FAR and RR through the lens of complex theoretical frameworks and how these interpretations can be communicated to stakeholders. When introducing new complex ideas, it will be important to make conscious design choices that will keep the user engaged and motivated to continue learning. Additionally, it will be important to caution users of requirements or restrictions of the data that these metrics are being applied to (e.g. sample size and distribution).\nThere are a couple resources that can provide a more thorough background on some of the concepts covered. The first resource is the book Causality: Models, Reasoning and Inference by Judea Pearl which teaches the foundations of the underlying causality theory in the user guide. Additionally, the annual review article that inspired this user guide, “Statistical Methods for Extreme Event Attribution in Climate Science” by Naveau et al. also serves as an in-depth reference for applying FAR and RR to complex, dynamic systems.",
+    "text": "B.0.0.1 Guide Content\nThis user guide will cover how the metrics of Fraction of Attributable Risk (FAR) and Risk Ratio (RR) can be used as tools for determining the contribution of a causal factor to extreme events. More specifically, the guide will begin by giving background on the factual vs counterfactual setup where it defines two scenarios, one where a specific causal factor is present (p1) and one where it is absent (p0). It will then define the metrics of FAR and RR by giving step by step instructions for calculation RR and FAR. We will then explain how to interpret these metrics along with how to apply them to the theoretical framework of probability of necessary causation and the probability of sufficient causation. In a final application, the guide will show how to visualize the shifts in event probability between the factual and counterfactual world through the use of univariate density plots. These visuals will demonstrate how a causal factor shifts the distribution and changes the likelihood of extreme outcomes. Throughout this content, each topic/step will be explained generally and will also follow an application example for Extreme Event Attribution (as it relates to climate science) to show how these metrics translate to real-world decision-making.\n\n\nB.0.0.2 User Assumptions\nThe primary users of this user guide are statisticians, data scientists, and risk analysts across various fields (e.g., climate science, epidemiology, or engineering) who need to quantify the influence of a specific factor on the occurrence of a rare event. The user guide assumes that readers have the following prerequisites:\n\nUnderstanding of basic probabilities: p = P(X &gt; u), where X is a random variable and u is a threshold value. Additionally, an understanding of random variables and probability distribution functions is needed.\nAn interest in the logic/reasoning of “necessary” vs. “sufficient” causation.\nBasic knowledge of climate risk issues and themes of recent scientific findings in the last 20 years related to human effects on climate change.\n\n\n\nB.0.0.3 User Needs\nUltimately, the user wants to provide a numerical answer to the question “How much did factor A increase the risk of event B?” where the numerical answer lies in the calculation and interpretation of FAR and RR. Someone trying to do this will first need help with understanding and following mathematical equations to calculate their metrics. After that, they will need guidance on interpreting FAR and RR through the lens of complex theoretical frameworks and how these interpretations can be communicated to stakeholders. When introducing new complex ideas, it will be important to make conscious design choices that will keep the user engaged and motivated to continue learning. Additionally, it will be important to caution users of requirements or restrictions of the data that these metrics are being applied to (e.g. sample size and distribution).\nThere are a couple resources that can provide a more thorough background on some of the concepts covered. The first resource is the book Causality: Models, Reasoning and Inference by Judea Pearl which teaches the foundations of the underlying causality theory in the user guide. Additionally, the annual review article that inspired this user guide, “Statistical Methods for Extreme Event Attribution in Climate Science” by Naveau et al. also serves as an in-depth reference for applying FAR and RR to complex, dynamic systems.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Needs Assessment</span>"
+    ]
+  },
+  {
+    "objectID": "task-analysis.html",
+    "href": "task-analysis.html",
+    "title": "Appendix C — Task Analysis",
+    "section": "",
+    "text": "C.0.0.1 Task Prerequisites\nGiven that this is a user guide for calculating statistical metrics, FAR and RR, and interpreting them, the only prerequisites are knowledge ones as we will not be applying these concepts to any code. The knowledge prerequisites are:",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Task Analysis</span>"
     ]
   },
   {
@@ -51,6 +181,16 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Task Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "guide.html#section",
+    "href": "guide.html#section",
+    "title": "1  Introduction",
+    "section": "1.3 ",
+    "text": "1.3",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   }
 ]

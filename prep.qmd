@@ -1,0 +1,11 @@
+# Preparation & Prerequisites
+
+## Knowledge Assumptions
+
+List the required knowledge in basic probability ($p = P(X > u)$), distribution functions, and recent climate risk findings.
+
+## Data Requirements
+
+Explain the necessity of having data for the same random variable (X) across two scenarios.
+
+Guidance on Distribution: Mention why Extreme Value Theory (EVT) is preferred for heavy-tailed "rare" events over normal distributions.

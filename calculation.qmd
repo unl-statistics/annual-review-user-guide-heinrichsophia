@@ -1,0 +1,5 @@
+# Calculating FAR & RR
+
+Risk Ratio (RR): Formula and step-by-step calculation instructions.
+
+Fraction of Attributable Risk (FAR): Formula and step-by-step calculation instructions.

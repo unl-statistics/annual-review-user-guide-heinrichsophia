@@ -1,0 +1,5 @@
+# Probability Estimation
+
+Instruction on choosing a method for estimating $p_1$ (factual) and $p_0$ (counterfactual).
+
+Briefly warn users about sample size requirements to ensure statistical validity.

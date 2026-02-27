@@ -1,0 +1,5 @@
+# Theoretical Causal Framework
+
+Probability of Necessary Causation (PN): Interpreting if the event would have happened without the causal factor.
+
+Probability of Sufficient Causation (PS): Interpreting if the factor alone was enough to trigger the event.

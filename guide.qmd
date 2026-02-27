@@ -1,5 +1,39 @@
-# User Guide
+# Introduction
 
-First off, you should change this section title to something more appropriate.
+This user guide provides step by step instructions on how to calculate and communicate Fraction of Attributable Risk (FAR) and Risk Ratio (RR). These metrics are fundamental parts of Extreme Event Attribution (EEA). EEA aims to evaluate how human-induced changes in Earth's state, like increased atmospheric greenhouse gases, affect the likelihood of extreme climate events. Along with calculations, this guide will show how these metrics can be used to visualize the shift in event probability between the factual and counterfactual world. Additionally, the tutorial will explain the significance of FAR and RR in climate science and how these metrics and visuals may be used to communicate the causality of human behaviors on the climate to decision-making stakeholders.
 
-Next, well, that's up to you. Good luck!
+By utilizing these metrics, you can provide a numerical answer to the question: "*How much did a specific factor increase the risk of an event?*"
+
+## Key Terms
+
+-   **Extreme Event Attribution (EEA)**: "EEA aims to evaluate how the likelihood of a specific extreme climate event (e.g. a major drought) has been affected by human activities, such as the increase of greenhouse gas concentrations associated with fossil fuel burning," [@naveauStatisticalMethodsExtreme2020].
+
+-   **Causal Inference:** the mathematical and logical framework used to determine if a specific change in one variable is directly responsible for a change in another.
+
+-   **Factual vs Counterfactual Framework**: To determine if a specific factor caused a change in an event, we compare two distinct scenarios:
+
+    -   **Factual Scenario** ($p_1$): The "observed" world. This scenario includes all existing conditions and the specific causal factor being studied.
+
+    -   **Counterfactual Scenario** ($p_0$): The "what if" world. This scenario is identical to the factual one, except the specific causal factor is removed.
+
+    [@naveauStatisticalMethodsExtreme2020]
+
+-   **Necessary vs. Sufficient Causation**: A **necessary cause** must be present for an effect to occur (e.g., fuel is necessary for a fire), but it does not guarantee the effect. A **sufficient cause** guarantees the effect will occur (e.g., a lit match in a gas-filled room), but it may not be the only way to cause that effect [@ferreira2NecessarySufficient2023].
+
+-   **Spatiotemporal Scale**: The combination of spatial extent (geographic area) and temporal duration (time period) at which environmental phenomena occur, are studied, or are addressed by policy [@SpatiotemporalScaleArea].
+
+-   **Extreme Value Theory (EVT)**: "A statistical approach that focuses on analyzing extreme events or values in data, rather than assuming a normal or symmetric distribution. It provides a framework for understanding and modeling the behavior of extreme values that exceed a certain threshold," [@WhatExtremeValue].
+
+-   **Fraction of Attributable Risk (FAR)**: a metric used to estimate the proportion of an observed event's risk that can be linked to a specific causal factor. It is mathematically expressed as $FAR = 1 - (p_0 / p_1)$ [@naveauStatisticalMethodsExtreme2020].
+
+-   **Risk Ratio (RR):** a metric used to compare the probability of of an event occurring in two different scenarios to determine how much a specific factor has increased or decreased the likelihood of that event. It is mathematically expressed as $RR = p_1 / p_0$ [@naveauStatisticalMethodsExtreme2020].
+
+## Learning Objectives
+
+By the end of this guide, you will be able to:
+
+-   **Define and scope an event** by selecting appropriate thresholds ($u$) and spatiotemporal scales for analysis.
+-   **Calculate** Fraction of Attributable Risk (**FAR**) and Risk Ratio (**RR**).
+-   **Interpret FAR and RR** within the framework of Necessary vs. Sufficient causation.
+-   **Visualize metrics** by creating univariate density plots to demonstrate how a causal factor shifts the probability distribution of an event.
+-   **Translate statistical outputs** into conclusions that inform real-world decision-making.

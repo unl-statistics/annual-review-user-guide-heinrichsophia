@@ -1,0 +1,9 @@
+# Defining the Scope
+
+## Threshold Selection (u)
+
+How to set a benchmark for "rare" while balancing confidence intervals.
+
+## Spatiotemporal Scaling
+
+Guidance on defining the event in terms of time and geography (e.g., single day vs. three-month continental scale).

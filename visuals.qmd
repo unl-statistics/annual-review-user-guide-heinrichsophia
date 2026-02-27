@@ -1,0 +1,5 @@
+# Visualization & Communication
+
+Visualizing Probability Shifts: Tutorial on using univariate density plots to show how a causal factor shifts the distribution.
+
+Stakeholder Communication: Best practices for translating these metrics into real-world decision-making narratives.

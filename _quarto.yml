@@ -8,13 +8,20 @@ date-format: long
 from: markdown+emoji
 
 book:
-  title: "User Guide: Annual Review Article Topic"
-  author: "Author Name"
+  title: "How to Calculate and Communicate Extreme Event Attribution"
+  author: "Sophia Heinrich"
   page-footer:
-    left: "Copyright 2025, Author Name"
+    left: "Copyright 2026, Sohia Heinrich"
   chapters:
     - index.qmd # Remove this before you submit your final report!
     - guide.qmd
+    - prep.qmd
+    - scope.qmd
+    - estimation.qmd
+    - calculation.qmd
+    - theoretical.qmd
+    - visuals.qmd
+    - troubleshooting.qmd
     - references.qmd
   appendices:
     - topic.qmd
