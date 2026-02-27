@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -129,8 +158,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./scope.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Scope</span></span></a>
+  <a href="./event.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Event</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -203,8 +232,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#fraction-of-attributable-risk-far" id="toc-fraction-of-attributable-risk-far" class="nav-link active" data-scroll-target="#fraction-of-attributable-risk-far"><span class="header-section-number">5.1</span> Fraction of Attributable Risk (FAR)</a></li>
+  <li><a href="#risk-ratio-rr" id="toc-risk-ratio-rr" class="nav-link" data-scroll-target="#risk-ratio-rr"><span class="header-section-number">5.2</span> Risk Ratio (RR)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -234,10 +270,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Risk Ratio (RR): Formula and step-by-step calculation instructions.</p>
-<p>Fraction of Attributable Risk (FAR): Formula and step-by-step calculation instructions.</p>
+<p>After estimating your probabilities (<span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span>), you can now calculate the two primary metrics used to quantify the human influence on an extreme event.</p>
+<section id="fraction-of-attributable-risk-far" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="fraction-of-attributable-risk-far"><span class="header-section-number">5.1</span> Fraction of Attributable Risk (FAR)</h2>
+<p>The <strong>FAR</strong> estimates the proportion of the observed event’s risk that is linked to the causal factor being studied.</p>
+<ol type="1">
+<li>Use the following equation to calculate the FAR:</li>
+</ol>
+<p><span class="math display">\[FAR = 1 - \frac{p_0}{p_1}\]</span></p>
+<ol start="2" type="1">
+<li>Interpret the Output:
+<ul>
+<li>A FAR of 0.90 suggests that 90% of the risk of the event was attributable to the causal factor.</li>
+<li>If <span class="math inline">\(p_1\)</span> is much larger than <span class="math inline">\(p_0\)</span>, the FAR will approach 1, indicating a high level of attribution.</li>
+</ul></li>
+</ol>
+</section>
+<section id="risk-ratio-rr" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="risk-ratio-rr"><span class="header-section-number">5.2</span> Risk Ratio (RR)</h2>
+<p>The <strong>RR</strong>, also known as the “likelihood ratio,” compares the probability of an event occurring in two different scenarios to determine how much a specific factor increased or decreased the likelihood of that event.</p>
+<ol type="1">
+<li>Use the following equation to calculate the RR:</li>
+</ol>
+<p><span class="math display">\[RR = \frac{p_1}{p_0}\]</span></p>
+<ol start="2" type="1">
+<li><p>Interpret the Output:</p>
+<ul>
+<li>A RR <span class="math inline">\(=\)</span> 2.0 means the event is <strong>twice as likely</strong> to occur in the factual world compared to the counterfactual world.</li>
+<li>A RR <span class="math inline">\(=\)</span> 1.0 indicates that the causal factor had <strong>no impact</strong> on the likelihood of the event.</li>
+<li>A RR <span class="math inline">\(\le\)</span> 1.0 indicates the causal factor <strong>decreased</strong> the likelihood of the event.</li>
+</ul></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

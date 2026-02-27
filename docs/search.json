@@ -94,7 +94,7 @@
     "href": "calculation.html",
     "title": "5  Calculating FAR & RR",
     "section": "",
-    "text": "Risk Ratio (RR): Formula and step-by-step calculation instructions.\nFraction of Attributable Risk (FAR): Formula and step-by-step calculation instructions.",
+    "text": "5.1 Fraction of Attributable Risk (FAR)\nAfter estimating your probabilities (\\(p_1\\) and \\(p_0\\)), you can now calculate the two primary metrics used to quantify the human influence on an extreme event.\nThe FAR estimates the proportion of the observed event’s risk that is linked to the causal factor being studied.\n\\[FAR = 1 - \\frac{p_0}{p_1}\\]",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Calculating FAR & RR</span>"
     ]
@@ -288,7 +288,7 @@
     "href": "event.html#selecting-an-event",
     "title": "3  Defining the Event",
     "section": "",
-    "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.",
+    "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\n\n\n\n\n\n\n\nTipWhere does Counterfactual Data come from?\n\n\n\nBecause the counterfactual world is a “what if” scenario, its data cannot be “real” in the sense of being currently observed. For climate events, it is generally obtained in one of two ways:\n\nClimate Model Simulations: Running complex computer models (GCMs) that simulate the Earth’s climate without human-induced greenhouse gas emissions.\nHistorical Proxies: Using high-quality observational records from the pre-industrial era (e.g., the late 1800s) to characterize a world before significant human influence.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
@@ -311,6 +311,26 @@
     "text": "4.2 Estimate \\(p_1\\) and \\(p_0\\)\nApply your chosen estimation method to both datasets:\n\nCalculate \\(p_1\\): Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).\nCalculate \\(p_0\\): Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).\n\n\n\n\n\n\n\nWarningSample Size Requirements\n\n\n\nEnsure your datasets are large enough to provide statistical validity. Small sample sizes for rare events can lead to high uncertainty and wide confidence intervals, which may make your final attribution metrics unreliable.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Probability Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "calculation.html#fraction-of-attributable-risk-far",
+    "href": "calculation.html#fraction-of-attributable-risk-far",
+    "title": "5  Calculating FAR & RR",
+    "section": "",
+    "text": "Use the following equation to calculate the FAR:\n\n\n\nInterpret the Output:\n\nA FAR of 0.90 suggests that 90% of the risk of the event was attributable to the causal factor.\nIf \\(p_1\\) is much larger than \\(p_0\\), the FAR will approach 1, indicating a high level of attribution.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Calculating FAR & RR</span>"
+    ]
+  },
+  {
+    "objectID": "calculation.html#risk-ratio-rr",
+    "href": "calculation.html#risk-ratio-rr",
+    "title": "5  Calculating FAR & RR",
+    "section": "5.2 Risk Ratio (RR)",
+    "text": "5.2 Risk Ratio (RR)\nThe RR, also known as the “likelihood ratio,” compares the probability of an event occurring in two different scenarios to determine how much a specific factor increased or decreased the likelihood of that event.\n\nUse the following equation to calculate the RR:\n\n\\[RR = \\frac{p_1}{p_0}\\]\n\nInterpret the Output:\n\nA RR \\(=\\) 2.0 means the event is twice as likely to occur in the factual world compared to the counterfactual world.\nA RR \\(=\\) 1.0 indicates that the causal factor had no impact on the likelihood of the event.\nA RR \\(\\le\\) 1.0 indicates the causal factor decreased the likelihood of the event.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Calculating FAR & RR</span>"
     ]
   }
 ]

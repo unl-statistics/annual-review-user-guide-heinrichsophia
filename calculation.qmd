@@ -1,5 +1,30 @@
 # Calculating FAR & RR
 
-Risk Ratio (RR): Formula and step-by-step calculation instructions.
+After estimating your probabilities ($p_1$ and $p_0$), you can now calculate the two primary metrics used to quantify the human influence on an extreme event.
 
-Fraction of Attributable Risk (FAR): Formula and step-by-step calculation instructions.
+## Fraction of Attributable Risk (FAR)
+
+The **FAR** estimates the proportion of the observed event's risk that is linked to the causal factor being studied.
+
+1.  Use the following equation to calculate the FAR:
+
+$$FAR = 1 - \frac{p_0}{p_1}$$
+
+2.  Interpret the Output:
+    -   A FAR of 0.90 suggests that 90% of the risk of the event was attributable to the causal factor.
+    -   If $p_1$ is much larger than $p_0$, the FAR will approach 1, indicating a high level of attribution.
+
+## Risk Ratio (RR)
+
+The **RR**, also known as the "likelihood ratio," compares the probability of an event occurring in two different scenarios to determine how much a specific factor increased or decreased the likelihood of that event.
+
+1.  Use the following equation to calculate the RR:
+
+$$RR = \frac{p_1}{p_0}$$
+
+2.  Interpret the Output:
+
+    -   A RR $=$ 2.0 means the event is **twice as likely** to occur in the factual world compared to the counterfactual world.
+    -   A RR $=$ 1.0 indicates that the causal factor had **no impact** on the likelihood of the event.
+    -   A RR $\le$ 1.0 indicates the causal factor **decreased** the likelihood of the event.
+

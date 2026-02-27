@@ -1,7 +1,6 @@
 # Defining the Event
 
 ::: callout-note
-
 In this guide, we will primarily use examples of extreme events related to climate science. However, this framework can be applied to extreme events in other fields, such as epidemiology.
 :::
 
@@ -11,9 +10,18 @@ Before applying any statistical models, you must first identify the specific ext
 
 -   **Identify the Hazard**: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.
 
+-   **Determine Stakeholder Needs**: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.
+
 -   **Verify Data Availability**: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.
 
--   **Determine Stakeholder Needs**: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.
+::: callout-tip
+## Where does Counterfactual Data come from?
+
+Because the counterfactual world is a "what if" scenario, its data cannot be "real" in the sense of being currently observed. For climate events, it is generally obtained in one of two ways:
+
+1.  *Climate Model Simulations*: Running complex computer models (GCMs) that simulate the Earth's climate without human-induced greenhouse gas emissions.
+2.  *Historical Proxies*: Using high-quality observational records from the pre-industrial era (e.g., the late 1800s) to characterize a world before significant human influence.
+:::
 
 ## Threshold Selection ($u$)
 
