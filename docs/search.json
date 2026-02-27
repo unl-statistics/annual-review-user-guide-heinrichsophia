@@ -44,7 +44,7 @@
     "href": "prep.html",
     "title": "2  Preparation & Prerequisites",
     "section": "",
-    "text": "2.1 Knowledge Assumptions\nList the required knowledge in basic probability (\\(p = P(X &gt; u)\\)), distribution functions, and recent climate risk findings.",
+    "text": "2.1 Knowledge Assumptions\nTo successfully use this guide, ensure you meet the following requirements.\nYou should have a good understanding of the following concepts and be able to apply them:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preparation & Prerequisites</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "prep.html#data-requirements",
     "title": "2  Preparation & Prerequisites",
     "section": "2.2 Data Requirements",
-    "text": "2.2 Data Requirements\nExplain the necessity of having data for the same random variable (X) across two scenarios.\nGuidance on Distribution: Mention why Extreme Value Theory (EVT) is preferred for heavy-tailed “rare” events over normal distributions.",
+    "text": "2.2 Data Requirements\nWhen working with extreme events, your choice of statistical model is critical and depends heavily on the event of interest:\n\nAvoid Normal Distributions: Standard normal or Gaussian distributions are often unsuitable for extreme events. However, a normal distribution may be applicable when studying certain events, such as mean seasonal temperatures, as they are generally “light-tailed” variables.\nPrioritize Extreme Value Theory (EVT): Use EVT for analysis because it is designed to handle heavy-tailed data and values that exceed a specific threshold.\n\n\n\n\n\n\n\nWarningData Consistency Notice\n\n\n\nEffective use of Extreme Event Attribution requires that you have data for the same random variable (\\(X\\)) collected or modeled across two distinct scenarios: the factual world and the counterfactual world.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preparation & Prerequisites</span>"
     ]
@@ -191,6 +191,16 @@
     "text": "1.3",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "prep.html#knowledge-assumptions",
+    "href": "prep.html#knowledge-assumptions",
+    "title": "2  Preparation & Prerequisites",
+    "section": "",
+    "text": "Basic Probability: Understanding the formula \\(p = P(X &gt; u)\\), where \\(p\\) represents the probability of a random variable \\(X\\) exceeding a specific threshold \\(u\\).\nDistribution Functions: Familiarity with how data is distributed and how to identify different distribution models.\nClimate Risk: General awareness of recent developments and findings in climate change risks.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preparation & Prerequisites</span>"
     ]
   }
 ]

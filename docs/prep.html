@@ -270,14 +270,36 @@ window.Quarto = {
 </header>
 
 
+<p>To successfully use this guide, ensure you meet the following requirements.</p>
 <section id="knowledge-assumptions" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="knowledge-assumptions"><span class="header-section-number">2.1</span> Knowledge Assumptions</h2>
-<p>List the required knowledge in basic probability (<span class="math inline">\(p = P(X &gt; u)\)</span>), distribution functions, and recent climate risk findings.</p>
+<p>You should have a good understanding of the following concepts and be able to apply them:</p>
+<ul>
+<li><strong>Basic Probability:</strong> Understanding the formula <span class="math inline">\(p = P(X &gt; u)\)</span>, where <span class="math inline">\(p\)</span> represents the probability of a random variable <span class="math inline">\(X\)</span> exceeding a specific threshold <span class="math inline">\(u\)</span>.</li>
+<li><strong>Distribution Functions:</strong> Familiarity with how data is distributed and how to identify different distribution models.</li>
+<li><strong>Climate Risk</strong>: General awareness of recent developments and findings in climate change risks.</li>
+</ul>
 </section>
 <section id="data-requirements" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="data-requirements"><span class="header-section-number">2.2</span> Data Requirements</h2>
-<p>Explain the necessity of having data for the same random variable (X) across two scenarios.</p>
-<p>Guidance on Distribution: Mention why Extreme Value Theory (EVT) is preferred for heavy-tailed “rare” events over normal distributions.</p>
+<p>When working with extreme events, your choice of statistical model is critical and depends heavily on the event of interest:</p>
+<ul>
+<li><p><strong>Avoid Normal Distributions</strong>: Standard normal or Gaussian distributions are often unsuitable for extreme events. However, a normal distribution may be applicable when studying certain events, such as mean seasonal temperatures, as they are generally “light-tailed” variables.</p></li>
+<li><p><strong>Prioritize Extreme Value Theory (EVT)</strong>: Use EVT for analysis because it is designed to handle heavy-tailed data and values that exceed a specific threshold.</p></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Data Consistency Notice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Effective use of Extreme Event Attribution requires that you have data for the same random variable (<span class="math inline">\(X\)</span>) collected or modeled across two distinct scenarios: the <strong>factual</strong> world and the <strong>counterfactual</strong> world.</p>
+</div>
+</div>
 
 
 </section>

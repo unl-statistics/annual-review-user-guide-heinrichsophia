@@ -1,11 +1,26 @@
 # Preparation & Prerequisites
 
+To successfully use this guide, ensure you meet the following requirements.
+
 ## Knowledge Assumptions
 
-List the required knowledge in basic probability ($p = P(X > u)$), distribution functions, and recent climate risk findings.
+You should have a good understanding of the following concepts and be able to apply them:
+
+-   **Basic Probability:** Understanding the formula $p = P(X > u)$, where $p$ represents the probability of a random variable $X$ exceeding a specific threshold $u$.
+-   **Distribution Functions:** Familiarity with how data is distributed and how to identify different distribution models.
+-   **Climate Risk**: General awareness of recent developments and findings in climate change risks.
 
 ## Data Requirements
 
-Explain the necessity of having data for the same random variable (X) across two scenarios.
+When working with extreme events, your choice of statistical model is critical and depends heavily on the event of interest:
 
-Guidance on Distribution: Mention why Extreme Value Theory (EVT) is preferred for heavy-tailed "rare" events over normal distributions.
+-   **Avoid Normal Distributions**: Standard normal or Gaussian distributions are often unsuitable for extreme events. However, a normal distribution may be applicable when studying certain events, such as mean seasonal temperatures, as they are generally "light-tailed" variables.
+
+-   **Prioritize Extreme Value Theory (EVT)**: Use EVT for analysis because it is designed to handle heavy-tailed data and values that exceed a specific threshold.
+
+::: {.callout-warning}
+
+### Data Consistency Notice
+
+Effective use of Extreme Event Attribution requires that you have data for the same random variable ($X$) collected or modeled across two distinct scenarios: the **factual** world and the **counterfactual** world.
+:::
