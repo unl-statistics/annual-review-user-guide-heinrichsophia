@@ -24,3 +24,11 @@ When working with extreme events, your choice of statistical model is critical a
 
 Effective use of Extreme Event Attribution requires that you have data for the same random variable ($X$) collected or modeled across two distinct scenarios: the **factual** world and the **counterfactual** world.
 :::
+
+::: {.callout-note}
+
+Ok, but how often do you actually have this data? How do you model the data if you don't have it collected (which I would assume you rarely get, seeing as how there isn't an easily accessible parallel Earth sans climate change?)
+
+It might be worth addressing that briefly and pointing readers to ways to implement causal modeling for counterfactuals. 
+
+:::
