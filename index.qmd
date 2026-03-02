@@ -1,30 +1,39 @@
-# Assignment Flow {.unnumbered}
+# Introduction {.unnumbered}
 
-This project is set up to scaffold this user guide and set you up for success.
+This user guide provides step by step instructions on how to calculate and communicate Fraction of Attributable Risk (FAR) and Risk Ratio (RR). These metrics are fundamental parts of Extreme Event Attribution (EEA). EEA aims to evaluate how human-induced changes in Earth's state, like increased atmospheric greenhouse gases, affect the likelihood of extreme climate events. Along with calculations, this guide will show how these metrics can be used to visualize the shift in event probability between the factual and counterfactual world. Additionally, the tutorial will explain the significance of FAR and RR in climate science and how these metrics and visuals may be used to communicate the causality of human behaviors on the climate to decision-making stakeholders.
 
-Start at `topic.qmd` and identify a topic for your user guide.
+By utilizing these metrics, you can provide a numerical answer to the question: "*How much did a specific factor increase the risk of an event?*"
 
-Once you've proposed a topic and received my approval/feedback, you can convert the contents of `topic.qmd` into an introductory paragraph in your report. Please leave the `topic.qmd` file as an appendix, to document the different stages of this project. 
+## Key Terms
 
-Once we've agreed on a topic for your user guide, you will proceed to `needs.qmd` and `task-analysis.qmd`. Both will be submitted at the same check-in, and both will be included in your final report as appendices. 
-You should be able to re-purpose most of the information in `task-analysis.qmd` to orient the user to different components of the task you've chosen.
+-   **Extreme Event Attribution (EEA)**: "EEA aims to evaluate how the likelihood of a specific extreme climate event (e.g. a major drought) has been affected by human activities, such as the increase of greenhouse gas concentrations associated with fossil fuel burning," [@naveauStatisticalMethodsExtreme2020].
 
-Your next step is to actually write the content that satisfies the work you outlined in `task-analysis.qmd`. 
+-   **Causal Inference:** the mathematical and logical framework used to determine if a specific change in one variable is directly responsible for a change in another.
 
-Once you're finished with that, ideally, you'll have plenty of time to edit and streamline your report. 
-Feel free to trade reports with a friend and try to complete your friend's task - this will help you both identify areas where the guide isn't as clear. 
-Try to complete the task with a different data set - that often helps find trouble spots.
+-   **Factual vs Counterfactual Framework**: To determine if a specific factor caused a change in an event, we compare two distinct scenarios:
 
+    -   **Factual Scenario** ($p_1$): The "observed" world. This scenario includes all existing conditions and the specific causal factor being studied.
 
-When you submit your final report, you may remove `index.qmd` from the `_quarto.yml` file, which will remove this chapter (which is quite unnecessary for your user) from the report. 
-You should also take the time to make sure your name is listed as both author and copyright holder in the `_quarto.yml` file. 
-Feel free to make a custom cover for your manual if you would like to do so. 
-You can also tweak the CSS/theme for the book, so long as you're conscious of accessibility concerns. 
+    -   **Counterfactual Scenario** ($p_0$): The "what if" world. This scenario is identical to the factual one, except the specific causal factor is removed.
 
-::: callout-caution
-## Building the report
+    [@naveauStatisticalMethodsExtreme2020]
 
-If you are using RStudio to complete this report, you can hit (Ctrl/Cmd)-Shift-B to build the whole report. You can also type `quarto render .` on the command line in the project folder to accomplish the same thing.
+-   **Necessary vs. Sufficient Causation**: A **necessary cause** must be present for an effect to occur (e.g., fuel is necessary for a fire), but it does not guarantee the effect. A **sufficient cause** guarantees the effect will occur (e.g., a lit match in a gas-filled room), but it may not be the only way to cause that effect [@ferreira2NecessarySufficient2023].
 
-If you have questions about how to customize or debug your book, it may be helpful to start at the quarto book documentation [@positpbcCreatingBook2024]. 
-:::
+-   **Spatiotemporal Scale**: The combination of spatial extent (geographic area) and temporal duration (time period) at which environmental phenomena occur, are studied, or are addressed by policy [@SpatiotemporalScaleArea].
+
+-   **Extreme Value Theory (EVT)**: "A statistical approach that focuses on analyzing extreme events or values in data, rather than assuming a normal or symmetric distribution. It provides a framework for understanding and modeling the behavior of extreme values that exceed a certain threshold," [@WhatExtremeValue].
+
+-   **Fraction of Attributable Risk (FAR)**: a metric used to estimate the proportion of an observed event's risk that can be linked to a specific causal factor. It is mathematically expressed as $FAR = 1 - (p_0 / p_1)$ [@naveauStatisticalMethodsExtreme2020].
+
+-   **Risk Ratio (RR):** a metric used to compare the probability of of an event occurring in two different scenarios to determine how much a specific factor has increased or decreased the likelihood of that event. It is mathematically expressed as $RR = p_1 / p_0$ [@naveauStatisticalMethodsExtreme2020].
+
+## Learning Objectives
+
+By the end of this guide, you will be able to:
+
+-   **Define and scope an event** by selecting appropriate thresholds ($u$) and spatiotemporal scales for analysis.
+-   **Calculate** Fraction of Attributable Risk (**FAR**) and Risk Ratio (**RR**).
+-   **Interpret FAR and RR** within the framework of Necessary vs. Sufficient causation.
+-   **Visualize metrics** by creating univariate density plots to demonstrate how a causal factor shifts the probability distribution of an event.
+-   **Translate statistical outputs** into conclusions that inform real-world decision-making.

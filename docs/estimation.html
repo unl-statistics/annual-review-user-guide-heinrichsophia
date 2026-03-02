@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-27">
+<meta name="dcterms.date" content="2026-03-02">
 
-<title>4&nbsp; Probability Estimation – How to Calculate and Communicate Extreme Event Attribution</title>
+<title>2&nbsp; Probability Estimation – How to Calculate and Communicate Extreme Event Attribution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./estimation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Probability Estimation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./estimation.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probability Estimation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -141,55 +141,49 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment Flow</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./guide.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./prep.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparation &amp; Prerequisites</span></span></a>
+ <span class="menu-text">Preparation &amp; Prerequisites</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./event.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Event</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Defining the Event</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./estimation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Probability Estimation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probability Estimation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./calculation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Calculating FAR &amp; RR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Calculating FAR &amp; RR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./theoretical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Theoretical Causal Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Theoretical Causal Framework</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./visuals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Troubleshooting &amp; Evaluation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Troubleshooting &amp; Evaluation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -237,8 +231,8 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#select-an-estimation-method" id="toc-select-an-estimation-method" class="nav-link active" data-scroll-target="#select-an-estimation-method"><span class="header-section-number">4.1</span> Select an Estimation Method</a></li>
-  <li><a href="#estimate-p_1-and-p_0" id="toc-estimate-p_1-and-p_0" class="nav-link" data-scroll-target="#estimate-p_1-and-p_0"><span class="header-section-number">4.2</span> Estimate <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span></a></li>
+  <li><a href="#select-an-estimation-method" id="toc-select-an-estimation-method" class="nav-link active" data-scroll-target="#select-an-estimation-method"><span class="header-section-number">2.1</span> Select an Estimation Method</a></li>
+  <li><a href="#estimate-p_1-and-p_0" id="toc-estimate-p_1-and-p_0" class="nav-link" data-scroll-target="#estimate-p_1-and-p_0"><span class="header-section-number">2.2</span> Estimate <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -247,7 +241,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Probability Estimation</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probability Estimation</span></h1>
 </div>
 
 
@@ -258,7 +252,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 27, 2026</p>
+      <p class="date">March 2, 2026</p>
     </div>
   </div>
   
@@ -271,8 +265,8 @@ window.Quarto = {
 
 
 <p>Once you have defined your event and threshold, you must estimate the probabilities of that event occurring in both the factual (<span class="math inline">\(p_1\)</span>) and counterfactual (<span class="math inline">\(p_0\)</span>) scenarios.</p>
-<section id="select-an-estimation-method" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="select-an-estimation-method"><span class="header-section-number">4.1</span> Select an Estimation Method</h2>
+<section id="select-an-estimation-method" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="select-an-estimation-method"><span class="header-section-number">2.1</span> Select an Estimation Method</h2>
 <p>Choose a statistical method to calculate the probabilities based on your data type and the rarity of the event:</p>
 <ul>
 <li><p><strong>Empirical Estimation</strong>: Use this for large datasets where you can simply count the number of times the variable <span class="math inline">\(X\)</span> exceeds your threshold <span class="math inline">\(u\)</span>.</p></li>
@@ -280,8 +274,8 @@ window.Quarto = {
 <li><p><strong>Climate Model Ensembles</strong>: If using modeled data, calculate the frequency of the event across multiple simulations to derive <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span>.</p></li>
 </ul>
 </section>
-<section id="estimate-p_1-and-p_0" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="estimate-p_1-and-p_0"><span class="header-section-number">4.2</span> Estimate <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span></h2>
+<section id="estimate-p_1-and-p_0" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="estimate-p_1-and-p_0"><span class="header-section-number">2.2</span> Estimate <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span></h2>
 <p>Apply your chosen estimation method to both datasets:</p>
 <ol type="1">
 <li><p><strong>Calculate</strong> <span class="math inline">\(p_1\)</span>: Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).</p></li>
@@ -708,12 +702,12 @@ window.Quarto = {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./event.html" class="pagination-link" aria-label="Defining the Event">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defining the Event</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Defining the Event</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./calculation.html" class="pagination-link" aria-label="Calculating FAR &amp; RR">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Calculating FAR &amp; RR</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Calculating FAR &amp; RR</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

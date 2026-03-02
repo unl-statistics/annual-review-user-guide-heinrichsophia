@@ -13,8 +13,7 @@ book:
   page-footer:
     left: "Copyright 2026, Sohia Heinrich"
   chapters:
-    - index.qmd # Remove this before you submit your final report!
-    - guide.qmd
+    - index.qmd
     - prep.qmd
     - event.qmd
     - estimation.qmd

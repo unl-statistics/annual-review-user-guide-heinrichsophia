@@ -1,4 +1,4 @@
-# Preparation & Prerequisites
+# Preparation & Prerequisites {.unnumbered}
 
 To successfully use this guide, ensure you meet the following requirements.
 
