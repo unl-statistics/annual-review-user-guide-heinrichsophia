@@ -1,0 +1,25 @@
+# Additional Resources {.unnumbered}
+
+This user guide provides the foundational steps for Extreme Event Attribution (EEA). To deepen your understanding of the climate science, statistical theory, and technical tools involved, explore the curated resources below.
+
+## Deepen Your Attribution Knowledge
+
+-   [**Statistical Methods for Extreme Event Attribution in Climate Science**](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-042720-125902): This user guide was inspired by this Annual Review article, which provides a high-level overview of the statistical foundations used in the field. It is an excellent resource for understanding how the Risk Ratio (RR) and Fraction of Attributable Risk (FAR) are derived from climate model ensembles and observational data.
+
+-   [**World Weather Attribution (WWA)**](https://www.worldweatherattribution.org/)**:** The global leader in real-time attribution studies. Explore their Resources and Publications to see how the methods we used are applied to real-world climate events.
+
+## Master the Tools (R & Quarto)
+
+-   [**R for Data Science (2e)**](https://r4ds.hadley.nz/)**:** The definitive guide for data manipulation and visualization with R.
+
+-   [**Official Quarto Guide**](https://quarto.org/docs/guide/): This user guide was created using Quarto. If you want to create a website displaying any work you do, the Official Quarto Guide is the best place to learn about how to organize multiple files into a cohesive project, customize your site's navigation, and use advanced formatting features like callout blocks and cross-references.
+
+## Advanced Statistical Causal Logic
+
+-   [**The Book of Why by Judea Pearl**](https://www.amazon.com/Book-Why-Science-Cause-Effect/dp/1541698967)**:** A non-technical introduction to causal inference. This is excellent for understanding the "Necessity vs. Sufficiency" logic on a deeper level.
+
+## Troubleshooting Support
+
+-   [**Stack Overflow (R tag)**](https://stackoverflow.com/collectives/r-language)**:** For specific code errors like `Object not found` or `YAMLException`.
+
+-   [**Posit Community**](https://forum.posit.co/)**:** A friendly forum specifically for RStudio and Quarto users to share best practices and debug rendering issues.

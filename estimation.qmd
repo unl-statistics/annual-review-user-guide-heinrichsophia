@@ -23,7 +23,7 @@ Apply your chosen estimation method to both datasets:
 ::: callout-tip
 # Example
 
-To calculate the probabilities, we count how many times our variable (temperature) crossed the threshold ($u = 25$) and divide by the total number of observations ($n$). In R, we can do this efficiently using the `mean()` function on a logical statement.
+To calculate the probabilities, we count how many times our variable (temperature) crossed the threshold $u = 25$ and divide by the total number of observations ($n$). In R, we can do this efficiently using the `mean()` function on a logical statement.
 
 ```{r}
 #| label: estimate-probabilities

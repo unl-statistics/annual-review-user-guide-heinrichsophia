@@ -1,6 +1,6 @@
 # Calculating FAR & RR
 
-After estimating your probabilities ($p_1$ and $p_0$), you can now calculate the two primary metrics used to quantify the human influence on an extreme event.
+After estimating your factual and counterfactual probabilities ($p_1$ and $p_0$), you can now calculate the two primary metrics used to quantify the human influence on an extreme event.
 
 ## Fraction of Attributable Risk (FAR)
 

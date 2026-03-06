@@ -8,6 +8,7 @@ You should have a good understanding of the following concepts and be able to ap
 
 -   **Basic Probability:** Understanding the formula $p = P(X > u)$, where $p$ represents the probability of a random variable $X$ exceeding a specific threshold $u$.
 -   **Distribution Functions:** Familiarity with how data is distributed and how to identify different distribution models.
+-   **R Programming**: You should be comfortable with reading basic R syntax, including the use of variables and functions (like `mean()` and `rnorm()`). A common software used to write and execute R programs is [RStudio](https://posit.co/download/rstudio-desktop/).
 -   **Climate Risk**: General awareness of recent developments and findings in climate change risks.
 
 ## Data Requirements
@@ -18,8 +19,7 @@ When working with extreme events, your choice of statistical model is critical a
 
 -   **Prioritize Extreme Value Theory (EVT)**: Use EVT for analysis because it is designed to handle heavy-tailed data and values that exceed a specific threshold.
 
-::: {.callout-warning}
-
+::: callout-warning
 ### Data Consistency Notice
 
 <<<<<<< HEAD

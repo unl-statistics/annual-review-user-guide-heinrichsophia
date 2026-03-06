@@ -1,6 +1,6 @@
 # Visualizing & Communicating Results
 
-After calculating your metrics and applying causal logic, you should visualize the data to demonstrate the shift in probabilities between factual and counterfactual worlds, along with translating your statistical findings for stakeholders. In the application below, we will represent counterfactual and factual worlds with probability density functions (PDF) and visualize the PDF with a Univariate Density Plot.
+After calculating your metrics and applying causal logic, you should visualize the data to demonstrate the shift in probabilities between factual and counterfactual worlds, along with translating your statistical findings for stakeholders. In the application below, we will represent counterfactual and factual worlds with probability density functions (PDF) and visualize the PDFs with a Univariate Density Plot.
 
 Here is a great resource if you need a refresher on [Probability Density Functions](https://statisticsbyjim.com/probability/probability-density-function/) [@frostProbabilityDensityFunction2022].
 
@@ -10,9 +10,9 @@ Here is a great resource if you need a refresher on [Probability Density Functio
 
 -   **Isolates the Impact:** Using a simpler univariate (single-variable) approach allows you to isolate one specific hazard—such as maximum daily rainfall or peak wind speed—without the complexity of multiple dimensions. This focus makes it easier to identify exactly how a causal factor affects that specific metric.
 
-## Creating Density Plots
+## Visualizing Data
 
-### Univariate Density Plot
+### Create a Univariate Density Plot
 
 Use a density plot to provide a visual that shows how the causal factor shifts the distribution of the event.
 
@@ -95,7 +95,7 @@ The above density plot visualizes the core theory of event attribution. Use the 
 
     -   The much larger factual (red shaded) area beyond the threshold represents $p_1$ (the probability of the event occurring in our current observed world).
 
--   **Visualize the Risk Ratio**: In the plot, the **Risk Ratio** is represented as the ratio between the blue and red shaded areas to the right the threshold line. Visually, you can see that the red area is several times larger than the blue area which confirms the Risk Ratio of `r round(p1/p0, 2)`. Thus, in our example, the influence of the causal factor (i.e., human activities) has made the occurrence of extreme heat events above `r threshold`$\degree$C `r round(p1/p0, 2)` times more likely.
+-   **Visualize the Risk Ratio**: In the plot, the **Risk Ratio** is represented as the ratio between the blue and red shaded areas to the right the of threshold line. Visually, you can see that the red area is several times larger than the blue area, which confirms the Risk Ratio of `r round(p1/p0, 2)`. Thus, in our example, the influence of the causal factor (i.e., human activities) has made the occurrence of extreme heat events above `r threshold`$\degree$C `r round(p1/p0, 2)` times more likely.
 
 -   **Visualize the FAR**: While the Risk Ratio compares the *sizes* of the two areas, the **FAR** tells you what percentage of the "Current Risk" (the red area) is "new", or comes as a result of the causal factor. In the example, the FAR is `r round(1 - (p0/p1), 2)`. You can explain that `r round(1 - (p0/p1), 2)*100`% of the red shaded area past the threshold is "excess risk" created by the shift in distribution. Only the remaining `r round((p0/p1), 2)*100`% (the part overlapping with the original blue area past the threshold) represents the natural, baseline risk.
 
@@ -125,7 +125,7 @@ When presenting the plot, do not assume the audience understands probability den
 
 ## Answer the Question
 
-In the introduction of this user guide, we set out to be able to answer the question: "*How much did a specific factor increase the risk of an event?*". Now that we know how to calculate, visualize, and communicate statistical metrics, we can provide a concrete answer.
+In the introduction of this user guide, we set out to be able to answer the question: "*How much did a specific factor increase the risk of an event?*" Now that we know how to calculate, visualize, and communicate statistical metrics, we can provide a concrete answer.
 
 ::: callout-tip
 # Example

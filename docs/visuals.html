@@ -286,9 +286,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#creating-density-plots" id="toc-creating-density-plots" class="nav-link active" data-scroll-target="#creating-density-plots"><span class="header-section-number">5.1</span> Creating Density Plots</a>
+  <li><a href="#visualizing-data" id="toc-visualizing-data" class="nav-link active" data-scroll-target="#visualizing-data"><span class="header-section-number">5.1</span> Visualizing Data</a>
   <ul class="collapse">
-  <li><a href="#univariate-density-plot" id="toc-univariate-density-plot" class="nav-link" data-scroll-target="#univariate-density-plot"><span class="header-section-number">5.1.1</span> Univariate Density Plot</a></li>
+  <li><a href="#create-a-univariate-density-plot" id="toc-create-a-univariate-density-plot" class="nav-link" data-scroll-target="#create-a-univariate-density-plot"><span class="header-section-number">5.1.1</span> Create a Univariate Density Plot</a></li>
   <li><a href="#interpret-the-plot" id="toc-interpret-the-plot" class="nav-link" data-scroll-target="#interpret-the-plot"><span class="header-section-number">5.1.2</span> Interpret the Plot</a></li>
   </ul></li>
   <li><a href="#communicate-metrics-plots" id="toc-communicate-metrics-plots" class="nav-link" data-scroll-target="#communicate-metrics-plots"><span class="header-section-number">5.2</span> Communicate Metrics &amp; Plots</a></li>
@@ -324,17 +324,17 @@ window.Quarto = {
 </header>
 
 
-<p>After calculating your metrics and applying causal logic, you should visualize the data to demonstrate the shift in probabilities between factual and counterfactual worlds, along with translating your statistical findings for stakeholders. In the application below, we will represent counterfactual and factual worlds with probability density functions (PDF) and visualize the PDF with a Univariate Density Plot.</p>
+<p>After calculating your metrics and applying causal logic, you should visualize the data to demonstrate the shift in probabilities between factual and counterfactual worlds, along with translating your statistical findings for stakeholders. In the application below, we will represent counterfactual and factual worlds with probability density functions (PDF) and visualize the PDFs with a Univariate Density Plot.</p>
 <p>Here is a great resource if you need a refresher on <a href="https://statisticsbyjim.com/probability/probability-density-function/">Probability Density Functions</a> <span class="citation" data-cites="frostProbabilityDensityFunction2022">(<a href="references.html#ref-frostProbabilityDensityFunction2022" role="doc-biblioref">Frost 2022</a>)</span>.</p>
 <p><strong>Why use PDFs and Univariate Density Plots?</strong></p>
 <ul>
 <li><p><strong>PDFs Visualize Probabilities:</strong> A PDF is a statistical function that describes the likelihood of a continuous variable (like temperature) taking on a specific value. Because the area under the curve represents probability, you can visually see the difference between <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span> by comparing the size of the “tails” beyond your threshold.</p></li>
 <li><p><strong>Isolates the Impact:</strong> Using a simpler univariate (single-variable) approach allows you to isolate one specific hazard—such as maximum daily rainfall or peak wind speed—without the complexity of multiple dimensions. This focus makes it easier to identify exactly how a causal factor affects that specific metric.</p></li>
 </ul>
-<section id="creating-density-plots" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="creating-density-plots"><span class="header-section-number">5.1</span> Creating Density Plots</h2>
-<section id="univariate-density-plot" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="univariate-density-plot"><span class="header-section-number">5.1.1</span> Univariate Density Plot</h3>
+<section id="visualizing-data" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="visualizing-data"><span class="header-section-number">5.1</span> Visualizing Data</h2>
+<section id="create-a-univariate-density-plot" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="create-a-univariate-density-plot"><span class="header-section-number">5.1.1</span> Create a Univariate Density Plot</h3>
 <p>Use a density plot to provide a visual that shows how the causal factor shifts the distribution of the event.</p>
 <ul>
 <li><p><strong>Plot the Distributions</strong>: Generate two overlapping density curves—one for the <strong>factual</strong> world and one for the <strong>counterfactual</strong> world.</p></li>
@@ -459,7 +459,7 @@ Table&nbsp;5.1: Summary of Attribution Metrics
 <li><p>The small counterfactual (blue shaded) area beyond the threshold represents <span class="math inline">\(p_0\)</span> (the probability of the event occurring naturally without the causal factor).</p></li>
 <li><p>The much larger factual (red shaded) area beyond the threshold represents <span class="math inline">\(p_1\)</span> (the probability of the event occurring in our current observed world).</p></li>
 </ul></li>
-<li><p><strong>Visualize the Risk Ratio</strong>: In the plot, the <strong>Risk Ratio</strong> is represented as the ratio between the blue and red shaded areas to the right the threshold line. Visually, you can see that the red area is several times larger than the blue area which confirms the Risk Ratio of 18.33. Thus, in our example, the influence of the causal factor (i.e., human activities) has made the occurrence of extreme heat events above 25<span class="math inline">\(\degree\)</span>C 18.33 times more likely.</p></li>
+<li><p><strong>Visualize the Risk Ratio</strong>: In the plot, the <strong>Risk Ratio</strong> is represented as the ratio between the blue and red shaded areas to the right the of threshold line. Visually, you can see that the red area is several times larger than the blue area, which confirms the Risk Ratio of 18.33. Thus, in our example, the influence of the causal factor (i.e., human activities) has made the occurrence of extreme heat events above 25<span class="math inline">\(\degree\)</span>C 18.33 times more likely.</p></li>
 <li><p><strong>Visualize the FAR</strong>: While the Risk Ratio compares the <em>sizes</em> of the two areas, the <strong>FAR</strong> tells you what percentage of the “Current Risk” (the red area) is “new”, or comes as a result of the causal factor. In the example, the FAR is 0.95. You can explain that 95% of the red shaded area past the threshold is “excess risk” created by the shift in distribution. Only the remaining 5% (the part overlapping with the original blue area past the threshold) represents the natural, baseline risk.</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -494,7 +494,7 @@ Table&nbsp;5.1: Summary of Attribution Metrics
 </section>
 <section id="answer-the-question" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="answer-the-question"><span class="header-section-number">5.3</span> Answer the Question</h2>
-<p>In the introduction of this user guide, we set out to be able to answer the question: “<em>How much did a specific factor increase the risk of an event?</em>”. Now that we know how to calculate, visualize, and communicate statistical metrics, we can provide a concrete answer.</p>
+<p>In the introduction of this user guide, we set out to be able to answer the question: “<em>How much did a specific factor increase the risk of an event?</em>” Now that we know how to calculate, visualize, and communicate statistical metrics, we can provide a concrete answer.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

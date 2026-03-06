@@ -22,11 +22,11 @@ In attribution science, a Risk Ratio of `Inf` (Infinity) occurs when $p_0$ is 0.
 
 Before you publish your results, perform a "Sanity Check" to ensure the logic holds up. If your results look like the examples below, you may need to re-evaluate your model:
 
--   **Is** $p_1$ smaller than $p_0$?: In a warming world example, the factual probability should be higher. If $p_1 < p_0$, check if you accidentally swapped your data labels or if you are studying a variable that should be decreasing (like extreme cold).
+-   **Is $p_1$ smaller than $p_0$?** In a warming world example, the factual probability should be higher. If $p_1 < p_0$, check if you accidentally swapped your data labels or if you are studying a variable that should be decreasing (like extreme cold).
 
--   **Is the Risk Ratio (RR) exactly 1?**: This means the causal factor had zero impact. While possible, double-check that your "Factual" and "Counterfactual" datasets aren't actually identical.
+-   **Is the Risk Ratio (RR) exactly 1?** This means the causal factor had zero impact. While possible, double-check that your "Factual" and "Counterfactual" datasets aren't actually identical.
 
--   **Is the FAR negative?**: A negative Fraction of Attributable Risk suggests the factor reduced the risk. If you are studying human-induced warming and heatwaves, a negative FAR usually indicates a calculation error in the formula $1 - (p_0 / p_1)$.
+-   **Is the FAR negative?** A negative Fraction of Attributable Risk suggests the factor reduced the risk. If you are studying human-induced warming and heatwaves, a negative FAR usually indicates a calculation error in the formula $1 - (p_0 / p_1)$.
 
 ## The "So What?" Test
 
@@ -34,4 +34,4 @@ Finally, evaluate the **communicative value** of your result. Ask yourself:
 
 > "If I tell a policymaker that an event is 1.2 times more likely, is that a meaningful change, or is it within the noise of natural variability?"
 
-Attribution is most powerful when the results are distinct enough to drive action. If your results are borderline, consider if your threshold $u$ is truly capturing an "extreme" or just a "heavy" event.
+Attribution is most powerful when the results are distinct enough to drive action. If your results are borderline, consider whether your threshold $u$ is truly capturing an "extreme" or just a "heavy" event.

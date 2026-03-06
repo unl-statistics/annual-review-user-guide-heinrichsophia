@@ -76,6 +76,7 @@ Below is an example of a defined event.
 -   **Boundaries**:
     -   **Spatial**: A localized region (e.g., "Region A") representing a specific urban or agricultural area.
     -   **Temporal**: The summer season (June–August).
-
-We will follow this example throughout the rest of the user guide.
 :::
+
+We will follow the above example throughout the rest of the user guide.
+

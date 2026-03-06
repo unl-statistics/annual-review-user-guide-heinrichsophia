@@ -1,6 +1,6 @@
 # Applying Causal Logic
 
-Calculating metrics is only the first step, as you must also interpret what those numbers mean in the context of causality. We use two primary concepts to determine the nature of a cause: **Necessity** and **Sufficiency**.
+Calculating metrics is only the first step, as you should also interpret what those numbers mean in the context of causality. Expanding on the raw metrics allows us to move from simply describing what happened to explaining why it happened. We use two primary concepts to determine the nature of a cause: **Necessity** and **Sufficiency**.
 
 ::: callout-note
 ## Key Terms

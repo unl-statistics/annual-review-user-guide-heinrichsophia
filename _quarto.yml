@@ -21,6 +21,7 @@ book:
     - theoretical.qmd
     - visuals.qmd
     - troubleshooting.qmd
+    - resources.qmd
     - references.qmd
   appendices:
     - topic.qmd
