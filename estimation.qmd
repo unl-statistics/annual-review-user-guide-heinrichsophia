@@ -20,6 +20,39 @@ Apply your chosen estimation method to both datasets:
 
 2.  **Calculate** $p_0$: Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).
 
+::: callout-tip
+# Example
+
+To calculate the probabilities, we count how many times our variable (temperature) crossed the threshold ($u = 25$) and divide by the total number of observations ($n$). In R, we can do this efficiently using the `mean()` function on a logical statement.
+
+```{r}
+#| label: estimate-probabilities
+#| echo: true
+
+# 1. Generate Synthetic Data (The "Worlds")
+set.seed(349)
+counterfactual_data <- rnorm(1000, mean = 20, sd = 2) # Cooler "Natural" World
+factual_data <- rnorm(1000, mean = 22, sd = 2) # Warmer "Current" World
+threshold <- 25
+
+# 2. Define the threshold
+u <- 25
+
+# 3. Calculate Probabilities
+p1 <- mean(factual_data >= u)
+p0 <- mean(counterfactual_data >= u)
+
+# Display results
+cat("Factual Probability (p1):", p1, "\n")
+cat("Counterfactual Probability (p0):", p0)
+```
+
+**Interpretation: **
+
+-   **Factual Probability ($p_1$) **: There is a **`r p1*100`%** chance of an event exceeding 25°C in our current, factual world (which is affected by the causal factor of human influence).
+-   **Counterfactual Probability ($p_0$)**: There is only a **`r p0*100`%** chance of this event occurring in the natural, counterfactual world.
+:::
+
 ::: callout-warning
 ## Sample Size Requirements
 

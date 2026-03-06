@@ -1,5 +1,80 @@
-# Theoretical Causal Framework
+# Applying Causal Logic
 
-Probability of Necessary Causation (PN): Interpreting if the event would have happened without the causal factor.
+Calculating metrics is only the first step, as you must also interpret what those numbers mean in the context of causality. We use two primary concepts to determine the nature of a cause: **Necessity** and **Sufficiency**.
 
-Probability of Sufficient Causation (PS): Interpreting if the factor alone was enough to trigger the event.
+::: callout-note
+## Key Terms
+
+As a reminder, a **necessary cause** must be present for an effect to occur (e.g., fuel is necessary for a fire), but it does not guarantee the effect. A **sufficient cause** guarantees the effect will occur (e.g., a lit match in a gas-filled room), but it may not be the only way to cause that effect.
+:::
+
+## Probability of Necessary Causation (PN)
+
+The **Probability of Necessary Causation** asks: *Would the event have happened anyway if the causal factor were absent?*
+
+-   **Metric Link**: In this framework, the **FAR** is mathematically equivalent to the PN.
+
+-   **Interpretation**: If your FAR is 0.9, there is a 90% probability that the extreme event would **not** have occurred without the human-induced factor.
+
+## Probability of Sufficient Causation (PS)
+
+The **Probability of Sufficient Causation** asks: *Is the causal factor alone enough to guarantee that the event will occur?*.
+
+-   **Metric Link**: While **RR** tells you how much the risk increased, the PS measures if the factor is powerful enough to produce the effect every time it is present. The formula for **PS** is
+
+    $$PS = 1 - \frac{1 - p_1}{1 - p_0}$$
+
+-   **Interpretation**: In most climate studies, $p_1$ is very small, which often results in a low PS even if the RR is very high. This indicates that while human influence made the event much more likely, it was not "sufficient" to cause it on its own.
+
+::: callout-tip
+## Example
+
+To understand how to apply this logic to the metrics calculated in the previous section:
+
+```{r}
+#| include: false
+
+# 1. Generate Synthetic Data (The "Worlds")
+set.seed(349)
+counterfactual_data <- rnorm(1000, mean = 20, sd = 2) # Cooler "Natural" World
+factual_data <- rnorm(1000, mean = 22, sd = 2) # Warmer "Current" World
+threshold <- 25
+
+# 2. Define the threshold
+u <- 25
+
+# 3. Calculate Probabilities
+p1 <- mean(factual_data >= u)
+p0 <- mean(counterfactual_data >= u)
+
+# 1. Calculate Risk Ratio
+risk_ratio <- p1 / p0
+
+# 2. Calculate Fraction of Attributable Risk
+far <- 1 - (p0 / p1)
+```
+
+::: {#tbl-attribution-results}
+| Metric                            | Variable | Value                         |
+|:---------------------|:--------------------------:|:---------------------|
+| Factual Probability               |  $p_1$   | `r p1`                        |
+| Counterfactual Probability        |  $p_0$   | `r p0`                        |
+| **Risk Ratio**                    |  **RR**  | **`r round(p1/p0, 2)`**       |
+| **Fraction of Attributable Risk** | **FAR**  | **`r round(1 - (p0/p1), 2)`** |
+
+Summary of Attribution Metrics
+:::
+#### Evaluate Necessity (PN) {.unnumbered}
+
+Because the FAR is `r round(far,2)`, the **Probability of Necessary Causation** is `r round(far,2)*100`%.
+
+-   **Interpretation**: There is a `r round(far,2)*100`% likelihood that an extreme heat event $> `r threshold`\degree C$ would **not** have occurred without the influence of human-induced climate change. The causal factor was a "necessary" trigger for the event to reach this magnitude.
+
+#### Evaluate Sufficiency (PS) {.unnumbered}
+
+Using the probabilities above, we calculate the **Probability of Sufficient Causation**:
+
+-   **Calculation**: $PS = 1 - \frac{1 - `r p1`}{1 - `r p0`} = 1 - \frac{`r 1 - p1`}{`r 1 - p0`} \approx `r 1 - (1 - p1)/ (1 - p0)`$
+
+-   **Interpretation**: The PS is only `r round((1 - (1 - p1)/(1 - p0)),3)*100`%. This means that while human influence made an extreme heat event $> `r threshold`\degree C$ much more likely, it was not "sufficient" to guarantee the event on its own; other natural factors still had to align.
+:::

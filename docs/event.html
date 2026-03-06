@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-02">
+<meta name="dcterms.date" content="2026-03-06">
 
 <title>1&nbsp; Defining the Event – How to Calculate and Communicate Extreme Event Attribution</title>
 <style>
@@ -171,13 +171,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./theoretical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Theoretical Causal Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applying Causal Logic</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./visuals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizing &amp; Communicating Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,7 +253,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2026</p>
+      <p class="date">March 6, 2026</p>
     </div>
   </div>
   
@@ -286,13 +286,13 @@ Note
 <li><p><strong>Determine Stakeholder Needs</strong>: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.</p></li>
 <li><p><strong>Verify Data Availability</strong>: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.</p></li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Where does Counterfactual Data come from?
+<span class="screen-reader-only">Note</span>Where does Counterfactual Data come from?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -306,11 +306,58 @@ Note
 </section>
 <section id="threshold-selection-u" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="threshold-selection-u"><span class="header-section-number">1.2</span> Threshold Selection (<span class="math inline">\(u\)</span>)</h2>
-<p>Once you have selected the type of event, you must set a benchmark for what qualifies as “rare”:</p>
+<p>Once you have selected the type of event, you must set a benchmark for what qualifies as a “rare” occurrence of that event:</p>
 <ul>
-<li><p><strong>Identify the Benchmark</strong>: Choose a value (<span class="math inline">\(u\)</span>) such that any observation <span class="math inline">\(X &gt; u\)</span> is considered an extreme occurrence. (e.g., rainfall in North America over 4 hours <span class="math inline">\(&gt;\)</span> 10 inches)</p></li>
+<li><p><strong>Identify the Benchmark</strong>: Choose a value (<span class="math inline">\(u\)</span>) such that any observation <span class="math inline">\(X &gt; u\)</span> is considered an extreme occurrence. (e.g., Event of interest: rainfall in North America over 4 hours, Threshold: <span class="math inline">\(&gt;\)</span> 10 inches of rain)</p></li>
 <li><p><strong>Balance Your Data</strong>: Avoid setting <span class="math inline">\(u\)</span> so high that you lack enough data points for statistical validity, but keep it high enough to remain in the “tail” of the distribution.</p></li>
 </ul>
+<div id="fig-threshold-comparison" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-threshold-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-threshold-comparison" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-threshold-comparison-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-threshold-comparison-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="event_files/figure-html/fig-threshold-comparison-1.png" class="img-fluid figure-img" data-ref-parent="fig-threshold-comparison" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-threshold-comparison-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Too Low: Not Extreme
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-threshold-comparison" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-threshold-comparison-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-threshold-comparison-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="event_files/figure-html/fig-threshold-comparison-2.png" class="img-fluid figure-img" data-ref-parent="fig-threshold-comparison" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-threshold-comparison-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Just Right: Statistical Balance
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-threshold-comparison" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-threshold-comparison-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-threshold-comparison-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="event_files/figure-html/fig-threshold-comparison-3.png" class="img-fluid figure-img" data-ref-parent="fig-threshold-comparison" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-threshold-comparison-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Too High: Not Enough Data
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-threshold-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Threshold selection: Too Low (Left), Just Right (Middle), Too High (Right)
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="boundaries" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="boundaries"><span class="header-section-number">1.3</span> Boundaries</h2>
@@ -320,6 +367,29 @@ Note
 <li><p><strong>Spatial Extent</strong>: Determine the geographic boundaries, such as a specific postal code, a watershed, or a continental region.</p></li>
 <li><p><strong>Maintain Consistency</strong>: Apply these exact boundaries to both your <strong>factual</strong> and <strong>counterfactual</strong> datasets to ensure a valid comparison.</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Below is an example of a defined event.</p>
+<ul>
+<li><strong>Event Type</strong>: Extreme Heat Temperatures</li>
+<li><strong>Threshold</strong> (<span class="math inline">\(u\)</span>): <span class="math inline">\(u &gt; 25\degree C\)</span> ; i.e., extreme heat events above <span class="math inline">\(25\degree C\)</span> are considered “rare”</li>
+<li><strong>Boundaries</strong>:
+<ul>
+<li><strong>Spatial</strong>: A localized region (e.g., “Region A”) representing a specific urban or agricultural area.</li>
+<li><strong>Temporal</strong>: The summer season (June–August).</li>
+</ul></li>
+</ul>
+<p>We will follow this example throughout the rest of the user guide.</p>
+</div>
+</div>
 
 
 </section>

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-02">
+<meta name="dcterms.date" content="2026-03-06">
 
-<title>5&nbsp; Visualization &amp; Communication – How to Calculate and Communicate Extreme Event Attribution</title>
+<title>5&nbsp; Visualizing &amp; Communicating Results – How to Calculate and Communicate Extreme Event Attribution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -72,6 +127,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visuals.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visuals.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizing &amp; Communicating Results</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -142,13 +226,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./theoretical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Theoretical Causal Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applying Causal Logic</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./visuals.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizing &amp; Communicating Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -197,15 +281,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#creating-density-plots" id="toc-creating-density-plots" class="nav-link active" data-scroll-target="#creating-density-plots"><span class="header-section-number">5.1</span> Creating Density Plots</a>
+  <ul class="collapse">
+  <li><a href="#univariate-density-plot" id="toc-univariate-density-plot" class="nav-link" data-scroll-target="#univariate-density-plot"><span class="header-section-number">5.1.1</span> Univariate Density Plot</a></li>
+  <li><a href="#interpret-the-plot" id="toc-interpret-the-plot" class="nav-link" data-scroll-target="#interpret-the-plot"><span class="header-section-number">5.1.2</span> Interpret the Plot</a></li>
+  </ul></li>
+  <li><a href="#communicate-metrics-plots" id="toc-communicate-metrics-plots" class="nav-link" data-scroll-target="#communicate-metrics-plots"><span class="header-section-number">5.2</span> Communicate Metrics &amp; Plots</a></li>
+  <li><a href="#answer-the-question" id="toc-answer-the-question" class="nav-link" data-scroll-target="#answer-the-question"><span class="header-section-number">5.3</span> Answer the Question</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization &amp; Communication</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizing &amp; Communicating Results</span></h1>
 </div>
 
 
@@ -216,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2026</p>
+      <p class="date">March 6, 2026</p>
     </div>
   </div>
   
@@ -228,10 +324,205 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Visualizing Probability Shifts: Tutorial on using univariate density plots to show how a causal factor shifts the distribution.</p>
-<p>Stakeholder Communication: Best practices for translating these metrics into real-world decision-making narratives.</p>
+<p>After calculating your metrics and applying causal logic, you should visualize the data to demonstrate the shift in probabilities between factual and counterfactual worlds, along with translating your statistical findings for stakeholders. In the application below, we will represent counterfactual and factual worlds with probability density functions (PDF) and visualize the PDF with a Univariate Density Plot.</p>
+<p>Here is a great resource if you need a refresher on <a href="https://statisticsbyjim.com/probability/probability-density-function/">Probability Density Functions</a> <span class="citation" data-cites="frostProbabilityDensityFunction2022">(<a href="references.html#ref-frostProbabilityDensityFunction2022" role="doc-biblioref">Frost 2022</a>)</span>.</p>
+<p><strong>Why use PDFs and Univariate Density Plots?</strong></p>
+<ul>
+<li><p><strong>PDFs Visualize Probabilities:</strong> A PDF is a statistical function that describes the likelihood of a continuous variable (like temperature) taking on a specific value. Because the area under the curve represents probability, you can visually see the difference between <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_0\)</span> by comparing the size of the “tails” beyond your threshold.</p></li>
+<li><p><strong>Isolates the Impact:</strong> Using a simpler univariate (single-variable) approach allows you to isolate one specific hazard—such as maximum daily rainfall or peak wind speed—without the complexity of multiple dimensions. This focus makes it easier to identify exactly how a causal factor affects that specific metric.</p></li>
+</ul>
+<section id="creating-density-plots" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="creating-density-plots"><span class="header-section-number">5.1</span> Creating Density Plots</h2>
+<section id="univariate-density-plot" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="univariate-density-plot"><span class="header-section-number">5.1.1</span> Univariate Density Plot</h3>
+<p>Use a density plot to provide a visual that shows how the causal factor shifts the distribution of the event.</p>
+<ul>
+<li><p><strong>Plot the Distributions</strong>: Generate two overlapping density curves—one for the <strong>factual</strong> world and one for the <strong>counterfactual</strong> world.</p></li>
+<li><p><strong>Mark the Threshold</strong> (<span class="math inline">\(u\)</span>): Add a vertical line at your chosen threshold to clearly define the “extreme” zone.</p></li>
+<li><p><strong>Highlight the Probability Shift</strong>: Use shading or arrows to show the increase in area under the curve beyond the threshold in the factual world.</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example: Univariate Plot
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Generate example data</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">349</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>counterfactual_data <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>factual_data <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">22</span>, <span class="at">sd =</span> <span class="dv">2</span>) </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>threshold <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Calculate probabilities (p0 and p1)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># We find the mean of a logical vector to get the proportion &gt; threshold</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fu">mean</span>(counterfactual_data <span class="sc">&gt;</span> threshold)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">mean</span>(factual_data <span class="sc">&gt;</span> threshold)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Combine into a dataframe for plotting</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">temp =</span> <span class="fu">c</span>(counterfactual_data, factual_data),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">world =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Counterfactual (Natural)"</span>, <span class="st">"Factual (Observed)"</span>), <span class="at">each =</span> <span class="dv">1000</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Create the plot</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> temp, <span class="at">fill =</span> world)) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span> </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> threshold, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">linewidth =</span>  <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="fl">26.25</span>, <span class="at">y =</span> <span class="fl">0.2</span>, </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"u = "</span>, threshold), </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Probability Shift of Extreme Heat Events"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Temperature (°C)"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Density"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Scenario"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-distribution-shift" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-distribution-shift-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals_files/figure-html/fig-distribution-shift-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distribution-shift-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Comparison of Factual and Counterfactual Temperature Distributions
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Reminder: The above plot was created using fake, generated data. However, for the sake of the example, we are still pretending that the difference in the counterfactual and factual data was caused by some human influence.</em></p>
+<div id="tbl-attribution-results" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-attribution-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.1: Summary of Attribution Metrics
+</figcaption>
+<div aria-describedby="tbl-attribution-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 38%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric</th>
+<th style="text-align: center;">Variable</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Factual Probability</td>
+<td style="text-align: center;"><span class="math inline">\(p_1\)</span></td>
+<td style="text-align: left;">0.055</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Counterfactual Probability</td>
+<td style="text-align: center;"><span class="math inline">\(p_0\)</span></td>
+<td style="text-align: left;">0.003</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Risk Ratio</strong></td>
+<td style="text-align: center;"><strong>RR</strong></td>
+<td style="text-align: left;"><strong>18.33</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Fraction of Attributable Risk</strong></td>
+<td style="text-align: center;"><strong>FAR</strong></td>
+<td style="text-align: left;"><strong>0.95</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="interpret-the-plot" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="interpret-the-plot"><span class="header-section-number">5.1.2</span> Interpret the Plot</h3>
+<p>The above density plot visualizes the core theory of event attribution. Use the following points to interpret the visual relationship between the factual and counterfactual worlds:</p>
+<ul>
+<li><p><strong>Identify the Shift</strong>: Notice that the <strong>Factual (Red)</strong> distribution has shifted to the right compared to the <strong>Counterfactual (Blue)</strong> distribution. This horizontal shift represents the influence of the causal factor (e.g., human activities) on the average climate conditions.</p></li>
+<li><p><strong>Locate the “Extreme” Zone</strong>: The area to the right of the dashed vertical line (<span class="math inline">\(u\)</span>) represents the “tail” of the distribution. Any data point in this zone is considered an extreme event. We can see that there are nonzero probabilities for extreme temperatures above the threshold in both the factual and counterfactual worlds.</p></li>
+<li><p><strong>Compare</strong> <span class="math inline">\(p_0\)</span> and <span class="math inline">\(p_1\)</span>:</p>
+<ul>
+<li><p>The small counterfactual (blue shaded) area beyond the threshold represents <span class="math inline">\(p_0\)</span> (the probability of the event occurring naturally without the causal factor).</p></li>
+<li><p>The much larger factual (red shaded) area beyond the threshold represents <span class="math inline">\(p_1\)</span> (the probability of the event occurring in our current observed world).</p></li>
+</ul></li>
+<li><p><strong>Visualize the Risk Ratio</strong>: In the plot, the <strong>Risk Ratio</strong> is represented as the ratio between the blue and red shaded areas to the right the threshold line. Visually, you can see that the red area is several times larger than the blue area which confirms the Risk Ratio of 18.33. Thus, in our example, the influence of the causal factor (i.e., human activities) has made the occurrence of extreme heat events above 25<span class="math inline">\(\degree\)</span>C 18.33 times more likely.</p></li>
+<li><p><strong>Visualize the FAR</strong>: While the Risk Ratio compares the <em>sizes</em> of the two areas, the <strong>FAR</strong> tells you what percentage of the “Current Risk” (the red area) is “new”, or comes as a result of the causal factor. In the example, the FAR is 0.95. You can explain that 95% of the red shaded area past the threshold is “excess risk” created by the shift in distribution. Only the remaining 5% (the part overlapping with the original blue area past the threshold) represents the natural, baseline risk.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Counterfactual &amp; Factual Overlap
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The area where the blue and red curves overlap represents events that could have happened in either world. However, the area under the red curve that does not overlap with the blue represents the risk specifically added by human influence.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="communicate-metrics-plots" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="communicate-metrics-plots"><span class="header-section-number">5.2</span> Communicate Metrics &amp; Plots</h2>
+<p>When communicating with decision-makers, translate abstract metrics into a narrative that informs real-world policy or adaptation.</p>
+<ul>
+<li><p><strong>Use the Risk Ratio for Likelihood</strong>: Instead of saying “RR = 10,” tell stakeholders the event is “10 times more likely” due to the causal factor.</p></li>
+<li><p><strong>Use FAR for Responsibility</strong>: Instead of saying “FAR = 0.90”, use the Fraction of Attributable Risk to explain what proportion of the risk is directly linked to human behavior.</p></li>
+<li><p><strong>Clarify Causality</strong>: Explicitly state whether the factor was a “necessary” trigger, but be careful to note if it was not “sufficient” to cause the event on its own. You may need to use an additional example (such as the fuel and fire example in the Key Terms section) to explain the difference between necessary and sufficient causation.</p></li>
+</ul>
+<p>When presenting the plot, do not assume the audience understands probability density. Use the following translation strategies:</p>
+<ul>
+<li><p><strong>Define the “Hill”:</strong> Explain that the “hill” represents where the variable (e.g., temperature) spends most of its time. The higher the peak, the more common that value is.</p></li>
+<li><p><strong>The “Shift” Narrative:</strong> Describe the movement of the factual curve as the “new normal.” Instead of saying “the mean shifted,” say “the entire climate has moved into warmer territory, pushing the whole curve with it.”</p></li>
+<li><p><strong>Focus on the “Tail”:</strong> Direct their eyes to the far right of the plot. Explain that while the middle of the “hill” moved a little, the “tail” (the extreme zone) grew significantly. This helps them understand why a small change in average temperature leads to a massive change in disaster frequency.</p></li>
+</ul>
+</section>
+<section id="answer-the-question" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="answer-the-question"><span class="header-section-number">5.3</span> Answer the Question</h2>
+<p>In the introduction of this user guide, we set out to be able to answer the question: “<em>How much did a specific factor increase the risk of an event?</em>”. Now that we know how to calculate, visualize, and communicate statistical metrics, we can provide a concrete answer.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using our example of extreme heat events from above:</p>
+<ul>
+<li><p><strong>Question</strong>: “<em>How much did human-induced influence (the causal factor) increase the risk of an extreme heat event exceeding 25°C</em>?<em>“</em></p></li>
+<li><p><strong>Results</strong>: We observed that the factual world (with human-induced warming) produced a <span class="math inline">\(p_1\)</span> of 0.055, while the natural, counterfactual world produced a <span class="math inline">\(p_0\)</span> of only 0.003. From <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span>, we calculated a Risk Ratio of 18.3 and a Fraction of Attributable Risk of 0.95.</p></li>
+<li><p><strong>Conclusion</strong>: The human-induced causal factor made extreme heat events <span class="math inline">\(&gt;\)</span> 25<span class="math inline">\(\degree\)</span>C <strong>18.3 times more likely</strong> to occur. Additionally, our results indicate that <strong>95%</strong> of the risk of exceeding the 25<span class="math inline">\(\degree\)</span>C threshold is directly attributable to the human-induced causal factor.<br>
+<br>
+<em>Note: our application of causal logic could also be added to the Conclusion for a deeper interpretation of the results.</em></p></li>
+</ul>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-frostProbabilityDensityFunction2022" class="csl-entry" role="listitem">
+Frost, Jim. 2022. <span>“Probability Density Function: Definition &amp; Uses. Statistics by Jim.”</span> August 28, 2022. <a href="https://statisticsbyjim.com/probability/probability-density-function/">https://statisticsbyjim.com/probability/probability-density-function/</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -636,8 +927,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./theoretical.html" class="pagination-link" aria-label="Theoretical Causal Framework">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Theoretical Causal Framework</span></span>
+      <a href="./theoretical.html" class="pagination-link" aria-label="Applying Causal Logic">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applying Causal Logic</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

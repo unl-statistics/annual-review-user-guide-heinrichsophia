@@ -54,7 +54,7 @@
     "href": "prep.html#data-requirements",
     "title": "Preparation & Prerequisites",
     "section": "Data Requirements",
-    "text": "Data Requirements\nWhen working with extreme events, your choice of statistical model is critical and depends heavily on the event of interest:\n\nAvoid Normal Distributions: Standard normal or Gaussian distributions are often unsuitable for extreme events. However, a normal distribution may be applicable when studying certain events, such as mean seasonal temperatures, as they are generally “light-tailed” variables.\nPrioritize Extreme Value Theory (EVT): Use EVT for analysis because it is designed to handle heavy-tailed data and values that exceed a specific threshold.\n\n\n\n\n\n\n\nWarningData Consistency Notice\n\n\n\nEffective use of Extreme Event Attribution requires that you have data for the same random variable (\\(X\\)) collected or modeled across two distinct scenarios: the factual world and the counterfactual world.",
+    "text": "Data Requirements\nWhen working with extreme events, your choice of statistical model is critical and depends heavily on the event of interest:\n\nAvoid Normal Distributions: Standard normal or Gaussian distributions are often unsuitable for extreme events. However, a normal distribution may be applicable when studying certain events, such as mean seasonal temperatures, as they are generally “light-tailed” variables.\nPrioritize Extreme Value Theory (EVT): Use EVT for analysis because it is designed to handle heavy-tailed data and values that exceed a specific threshold.\n\n\n\n\n\n\n\nWarningData Consistency Notice\n\n\n\nEffective use of Extreme Event Attribution requires that you have data for the same random variable (\\(X\\)) collected or modeled across two distinct scenarios: the factual world and the counterfactual world. The next section contains a tip on how one might gather counterfactual data.",
     "crumbs": [
       "Preparation & Prerequisites"
     ]
@@ -74,7 +74,7 @@
     "href": "event.html#selecting-an-event",
     "title": "1  Defining the Event",
     "section": "",
-    "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\n\n\n\n\n\n\n\nTipWhere does Counterfactual Data come from?\n\n\n\nBecause the counterfactual world is a “what if” scenario, its data cannot be “real” in the sense of being currently observed. For climate events, it is generally obtained in one of two ways:\n\nClimate Model Simulations: Running complex computer models (GCMs) that simulate the Earth’s climate without human-induced greenhouse gas emissions.\nHistorical Proxies: Using high-quality observational records from the pre-industrial era (e.g., the late 1800s) to characterize a world before significant human influence.",
+    "text": "Identify the Hazard: Choose a clear physical phenomenon, such as a heatwave, flood, or drought, that has a measurable impact.\nDetermine Stakeholder Needs: Select an event that is relevant to the decision-makers you are advising, such as an event that caused significant economic damage or impacted public safety.\nVerify Data Availability: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.\n\n\n\n\n\n\n\nNoteWhere does Counterfactual Data come from?\n\n\n\nBecause the counterfactual world is a “what if” scenario, its data cannot be “real” in the sense of being currently observed. For climate events, it is generally obtained in one of two ways:\n\nClimate Model Simulations: Running complex computer models (GCMs) that simulate the Earth’s climate without human-induced greenhouse gas emissions.\nHistorical Proxies: Using high-quality observational records from the pre-industrial era (e.g., the late 1800s) to characterize a world before significant human influence.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "event.html#threshold-selection-u",
     "title": "1  Defining the Event",
     "section": "1.2 Threshold Selection (\\(u\\))",
-    "text": "1.2 Threshold Selection (\\(u\\))\nOnce you have selected the type of event, you must set a benchmark for what qualifies as “rare”:\n\nIdentify the Benchmark: Choose a value (\\(u\\)) such that any observation \\(X &gt; u\\) is considered an extreme occurrence. (e.g., rainfall in North America over 4 hours \\(&gt;\\) 10 inches)\nBalance Your Data: Avoid setting \\(u\\) so high that you lack enough data points for statistical validity, but keep it high enough to remain in the “tail” of the distribution.",
+    "text": "1.2 Threshold Selection (\\(u\\))\nOnce you have selected the type of event, you must set a benchmark for what qualifies as a “rare” occurrence of that event:\n\nIdentify the Benchmark: Choose a value (\\(u\\)) such that any observation \\(X &gt; u\\) is considered an extreme occurrence. (e.g., Event of interest: rainfall in North America over 4 hours, Threshold: \\(&gt;\\) 10 inches of rain)\nBalance Your Data: Avoid setting \\(u\\) so high that you lack enough data points for statistical validity, but keep it high enough to remain in the “tail” of the distribution.\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Too Low: Not Extreme\n\n\n\n\n\n\n\n\n\n\n\n(b) Just Right: Statistical Balance\n\n\n\n\n\n\n\n\n\n\n\n(c) Too High: Not Enough Data\n\n\n\n\n\n\n\nFigure 1.1: Threshold selection: Too Low (Left), Just Right (Middle), Too High (Right)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "event.html#boundaries",
     "title": "1  Defining the Event",
     "section": "1.3 Boundaries",
-    "text": "1.3 Boundaries\nDefine the specific limits of the event to ensure your analysis is contained and reproducible.\n\nTemporal Duration: Define the time window for the event (e.g., a 24-hour peak vs. a 3-month seasonal average).\nSpatial Extent: Determine the geographic boundaries, such as a specific postal code, a watershed, or a continental region.\nMaintain Consistency: Apply these exact boundaries to both your factual and counterfactual datasets to ensure a valid comparison.",
+    "text": "1.3 Boundaries\nDefine the specific limits of the event to ensure your analysis is contained and reproducible.\n\nTemporal Duration: Define the time window for the event (e.g., a 24-hour peak vs. a 3-month seasonal average).\nSpatial Extent: Determine the geographic boundaries, such as a specific postal code, a watershed, or a continental region.\nMaintain Consistency: Apply these exact boundaries to both your factual and counterfactual datasets to ensure a valid comparison.\n\n\n\n\n\n\n\nTipExample\n\n\n\nBelow is an example of a defined event.\n\nEvent Type: Extreme Heat Temperatures\nThreshold (\\(u\\)): \\(u &gt; 25\\degree C\\) ; i.e., extreme heat events above \\(25\\degree C\\) are considered “rare”\nBoundaries:\n\nSpatial: A localized region (e.g., “Region A”) representing a specific urban or agricultural area.\nTemporal: The summer season (June–August).\n\n\nWe will follow this example throughout the rest of the user guide.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Defining the Event</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "estimation.html#estimate-p_1-and-p_0",
     "title": "2  Probability Estimation",
     "section": "2.2 Estimate \\(p_1\\) and \\(p_0\\)",
-    "text": "2.2 Estimate \\(p_1\\) and \\(p_0\\)\nApply your chosen estimation method to both datasets:\n\nCalculate \\(p_1\\): Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).\nCalculate \\(p_0\\): Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).\n\n\n\n\n\n\n\nWarningSample Size Requirements\n\n\n\nEnsure your datasets are large enough to provide statistical validity. Small sample sizes for rare events can lead to high uncertainty and wide confidence intervals, which may make your final attribution metrics unreliable.",
+    "text": "2.2 Estimate \\(p_1\\) and \\(p_0\\)\nApply your chosen estimation method to both datasets:\n\nCalculate \\(p_1\\): Determine the probability of the event occurring in the factual scenario (the world with the causal factor present).\nCalculate \\(p_0\\): Determine the probability of the same event occurring in the counterfactual scenario (the world without the causal factor).\n\n\n\n\n\n\n\nTipExample\n\n\n\nTo calculate the probabilities, we count how many times our variable (temperature) crossed the threshold (\\(u = 25\\)) and divide by the total number of observations (\\(n\\)). In R, we can do this efficiently using the mean() function on a logical statement.\n\n# 1. Generate Synthetic Data (The \"Worlds\")\nset.seed(349)\ncounterfactual_data &lt;- rnorm(1000, mean = 20, sd = 2) # Cooler \"Natural\" World\nfactual_data &lt;- rnorm(1000, mean = 22, sd = 2) # Warmer \"Current\" World\nthreshold &lt;- 25\n\n# 2. Define the threshold\nu &lt;- 25\n\n# 3. Calculate Probabilities\np1 &lt;- mean(factual_data &gt;= u)\np0 &lt;- mean(counterfactual_data &gt;= u)\n\n# Display results\ncat(\"Factual Probability (p1):\", p1, \"\\n\")\n\nFactual Probability (p1): 0.055 \n\ncat(\"Counterfactual Probability (p0):\", p0)\n\nCounterfactual Probability (p0): 0.003\n\n\nInterpretation: \n\nFactual Probability (\\(p_1\\)) : There is a 5.5% chance of an event exceeding 25°C in our current, factual world (which is affected by the causal factor of human influence).\nCounterfactual Probability (\\(p_0\\)): There is only a 0.3% chance of this event occurring in the natural, counterfactual world.\n\n\n\n\n\n\n\n\n\nWarningSample Size Requirements\n\n\n\nEnsure your datasets are large enough to provide statistical validity. Small sample sizes for rare events can lead to high uncertainty and wide confidence intervals, which may make your final attribution metrics unreliable.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability Estimation</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "calculation.html#risk-ratio-rr",
     "title": "3  Calculating FAR & RR",
     "section": "3.2 Risk Ratio (RR)",
-    "text": "3.2 Risk Ratio (RR)\nThe RR, also known as the “likelihood ratio,” compares the probability of an event occurring in two different scenarios to determine how much a specific factor increased or decreased the likelihood of that event.\n\nUse the following equation to calculate the RR:\n\n\\[RR = \\frac{p_1}{p_0}\\]\n\nInterpret the Output:\n\nA RR \\(=\\) 2.0 means the event is twice as likely to occur in the factual world compared to the counterfactual world.\nA RR \\(=\\) 1.0 indicates that the causal factor had no impact on the likelihood of the event.\nA RR \\(\\le\\) 1.0 indicates the causal factor decreased the likelihood of the event.",
+    "text": "3.2 Risk Ratio (RR)\nThe RR, also known as the “likelihood ratio,” compares the probability of an event occurring in two different scenarios to determine how much a specific factor increased or decreased the likelihood of that event.\n\nUse the following equation to calculate the RR:\n\n\\[RR = \\frac{p_1}{p_0}\\]\n\nInterpret the Output:\n\nA RR \\(=\\) 2.0 means the event is twice as likely to occur in the factual world compared to the counterfactual world.\nA RR \\(=\\) 1.0 indicates that the causal factor had no impact on the likelihood of the event.\nA RR \\(\\le\\) 1.0 indicates the causal factor decreased the likelihood of the event.\n\n\n\n\n\n\n\n\nTipExample\n\n\n\nContinuing with our synthetic 25°C threshold data, we can calculate these metrics in R using the variables we defined in the Estimation step.\n\n# 1. Calculate Risk Ratio\nrisk_ratio &lt;- p1 / p0\n\n# 2. Calculate Fraction of Attributable Risk\nfar &lt;- 1 - (p0 / p1)\n\n# Display results\ncat(\"Risk Ratio (RR):\", round(risk_ratio, 2), \"\\n\")\n\nRisk Ratio (RR): 18.33 \n\ncat(\"Fraction of Attributable Risk (FAR):\", round(far, 2))\n\nFraction of Attributable Risk (FAR): 0.95\n\n\nInterpretation: \n\nRR: The causal factor has made an extreme heat event above 25°C 18.3333333 times more likely to occur compared to the natural world.\nFAR: We can conclude that 95% of the risk of this heat event was contributed by the causal factor, while only 5% was due to natural internal variability.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Calculating FAR & RR</span>"
     ]
@@ -162,21 +162,61 @@
   {
     "objectID": "theoretical.html",
     "href": "theoretical.html",
-    "title": "4  Theoretical Causal Framework",
+    "title": "4  Applying Causal Logic",
     "section": "",
-    "text": "Probability of Necessary Causation (PN): Interpreting if the event would have happened without the causal factor.\nProbability of Sufficient Causation (PS): Interpreting if the factor alone was enough to trigger the event.",
+    "text": "4.1 Probability of Necessary Causation (PN)\nCalculating metrics is only the first step, as you must also interpret what those numbers mean in the context of causality. We use two primary concepts to determine the nature of a cause: Necessity and Sufficiency.\nThe Probability of Necessary Causation asks: Would the event have happened anyway if the causal factor were absent?",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Theoretical Causal Framework</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Applying Causal Logic</span>"
+    ]
+  },
+  {
+    "objectID": "theoretical.html#probability-of-necessary-causation-pn",
+    "href": "theoretical.html#probability-of-necessary-causation-pn",
+    "title": "4  Applying Causal Logic",
+    "section": "",
+    "text": "Metric Link: In this framework, the FAR is mathematically equivalent to the PN.\nInterpretation: If your FAR is 0.9, there is a 90% probability that the extreme event would not have occurred without the human-induced factor.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Applying Causal Logic</span>"
+    ]
+  },
+  {
+    "objectID": "theoretical.html#probability-of-sufficient-causation-ps",
+    "href": "theoretical.html#probability-of-sufficient-causation-ps",
+    "title": "4  Applying Causal Logic",
+    "section": "4.2 Probability of Sufficient Causation (PS)",
+    "text": "4.2 Probability of Sufficient Causation (PS)\nThe Probability of Sufficient Causation asks: Is the causal factor alone enough to guarantee that the event will occur?.\n\nMetric Link: While RR tells you how much the risk increased, the PS measures if the factor is powerful enough to produce the effect every time it is present. The formula for PS is\n\\[PS = 1 - \\frac{1 - p_1}{1 - p_0}\\]\nInterpretation: In most climate studies, \\(p_1\\) is very small, which often results in a low PS even if the RR is very high. This indicates that while human influence made the event much more likely, it was not “sufficient” to cause it on its own.\n\n\n\n\n\n\n\nTipExample\n\n\n\nTo understand how to apply this logic to the metrics calculated in the previous section:\n\n\n\nTable 4.1: Summary of Attribution Metrics\n\n\n\n\n\n\n\n\n\n\nMetric\nVariable\nValue\n\n\n\n\nFactual Probability\n\\(p_1\\)\n0.055\n\n\nCounterfactual Probability\n\\(p_0\\)\n0.003\n\n\nRisk Ratio\nRR\n18.33\n\n\nFraction of Attributable Risk\nFAR\n0.95\n\n\n\n\n\n\n\nEvaluate Necessity (PN)\nBecause the FAR is 0.95, the Probability of Necessary Causation is 95%.\n\nInterpretation: There is a 95% likelihood that an extreme heat event \\(&gt; 25\\degree C\\) would not have occurred without the influence of human-induced climate change. The causal factor was a “necessary” trigger for the event to reach this magnitude.\n\n\n\nEvaluate Sufficiency (PS)\nUsing the probabilities above, we calculate the Probability of Sufficient Causation:\n\nCalculation: \\(PS = 1 - \\frac{1 - 0.055}{1 - 0.003} = 1 - \\frac{0.945}{0.997} \\approx 0.0521565\\)\nInterpretation: The PS is only 5.2%. This means that while human influence made an extreme heat event \\(&gt; 25\\degree C\\) much more likely, it was not “sufficient” to guarantee the event on its own; other natural factors still had to align.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Applying Causal Logic</span>"
     ]
   },
   {
     "objectID": "visuals.html",
     "href": "visuals.html",
-    "title": "5  Visualization & Communication",
+    "title": "5  Visualizing & Communicating Results",
     "section": "",
-    "text": "Visualizing Probability Shifts: Tutorial on using univariate density plots to show how a causal factor shifts the distribution.\nStakeholder Communication: Best practices for translating these metrics into real-world decision-making narratives.",
+    "text": "5.1 Creating Density Plots\nAfter calculating your metrics and applying causal logic, you should visualize the data to demonstrate the shift in probabilities between factual and counterfactual worlds, along with translating your statistical findings for stakeholders. In the application below, we will represent counterfactual and factual worlds with probability density functions (PDF) and visualize the PDF with a Univariate Density Plot.\nHere is a great resource if you need a refresher on Probability Density Functions (Frost 2022).\nWhy use PDFs and Univariate Density Plots?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualization & Communication</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizing & Communicating Results</span>"
+    ]
+  },
+  {
+    "objectID": "visuals.html#creating-density-plots",
+    "href": "visuals.html#creating-density-plots",
+    "title": "5  Visualizing & Communicating Results",
+    "section": "",
+    "text": "5.1.1 Univariate Density Plot\nUse a density plot to provide a visual that shows how the causal factor shifts the distribution of the event.\n\nPlot the Distributions: Generate two overlapping density curves—one for the factual world and one for the counterfactual world.\nMark the Threshold (\\(u\\)): Add a vertical line at your chosen threshold to clearly define the “extreme” zone.\nHighlight the Probability Shift: Use shading or arrows to show the increase in area under the curve beyond the threshold in the factual world.\n\n\n\n\n\n\n\nTipExample: Univariate Plot\n\n\n\n\nlibrary(ggplot2)\n\n# 1. Generate example data\nset.seed(349)\ncounterfactual_data &lt;- rnorm(1000, mean = 20, sd = 2)\nfactual_data &lt;- rnorm(1000, mean = 22, sd = 2) \nthreshold &lt;- 25\n\n# 2. Calculate probabilities (p0 and p1)\n# We find the mean of a logical vector to get the proportion &gt; threshold\np0 &lt;- mean(counterfactual_data &gt; threshold)\np1 &lt;- mean(factual_data &gt; threshold)\n\n# 3. Combine into a dataframe for plotting\ndata &lt;- data.frame(\n  temp = c(counterfactual_data, factual_data),\n  world = rep(c(\"Counterfactual (Natural)\", \"Factual (Observed)\"), each = 1000)\n)\n\n# 4. Create the plot\nggplot(data, aes(x = temp, fill = world)) +\n  geom_density(alpha = 0.4) + \n  geom_vline(xintercept = threshold, linetype = \"dashed\", linewidth =  1) +\n  scale_fill_manual(values = c(\"blue\", \"red\")) +\n  annotate(\"label\", x = 26.25, y = 0.2, \n           label = paste0(\"u = \", threshold), \n           fill = \"white\") +\n  labs(\n    title = \"Probability Shift of Extreme Heat Events\",\n    x = \"Temperature (°C)\",\n    y = \"Density\",\n    fill = \"Scenario\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 5.1: Comparison of Factual and Counterfactual Temperature Distributions\n\n\n\n\n\nReminder: The above plot was created using fake, generated data. However, for the sake of the example, we are still pretending that the difference in the counterfactual and factual data was caused by some human influence.\n\n\n\nTable 5.1: Summary of Attribution Metrics\n\n\n\n\n\n\n\n\n\n\nMetric\nVariable\nValue\n\n\n\n\nFactual Probability\n\\(p_1\\)\n0.055\n\n\nCounterfactual Probability\n\\(p_0\\)\n0.003\n\n\nRisk Ratio\nRR\n18.33\n\n\nFraction of Attributable Risk\nFAR\n0.95\n\n\n\n\n\n\n\n\n\n\n5.1.2 Interpret the Plot\nThe above density plot visualizes the core theory of event attribution. Use the following points to interpret the visual relationship between the factual and counterfactual worlds:\n\nIdentify the Shift: Notice that the Factual (Red) distribution has shifted to the right compared to the Counterfactual (Blue) distribution. This horizontal shift represents the influence of the causal factor (e.g., human activities) on the average climate conditions.\nLocate the “Extreme” Zone: The area to the right of the dashed vertical line (\\(u\\)) represents the “tail” of the distribution. Any data point in this zone is considered an extreme event. We can see that there are nonzero probabilities for extreme temperatures above the threshold in both the factual and counterfactual worlds.\nCompare \\(p_0\\) and \\(p_1\\):\n\nThe small counterfactual (blue shaded) area beyond the threshold represents \\(p_0\\) (the probability of the event occurring naturally without the causal factor).\nThe much larger factual (red shaded) area beyond the threshold represents \\(p_1\\) (the probability of the event occurring in our current observed world).\n\nVisualize the Risk Ratio: In the plot, the Risk Ratio is represented as the ratio between the blue and red shaded areas to the right the threshold line. Visually, you can see that the red area is several times larger than the blue area which confirms the Risk Ratio of 18.33. Thus, in our example, the influence of the causal factor (i.e., human activities) has made the occurrence of extreme heat events above 25\\(\\degree\\)C 18.33 times more likely.\nVisualize the FAR: While the Risk Ratio compares the sizes of the two areas, the FAR tells you what percentage of the “Current Risk” (the red area) is “new”, or comes as a result of the causal factor. In the example, the FAR is 0.95. You can explain that 95% of the red shaded area past the threshold is “excess risk” created by the shift in distribution. Only the remaining 5% (the part overlapping with the original blue area past the threshold) represents the natural, baseline risk.\n\n\n\n\n\n\n\nNoteCounterfactual & Factual Overlap\n\n\n\nThe area where the blue and red curves overlap represents events that could have happened in either world. However, the area under the red curve that does not overlap with the blue represents the risk specifically added by human influence.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizing & Communicating Results</span>"
+    ]
+  },
+  {
+    "objectID": "visuals.html#communicate-metrics-plots",
+    "href": "visuals.html#communicate-metrics-plots",
+    "title": "5  Visualizing & Communicating Results",
+    "section": "5.2 Communicate Metrics & Plots",
+    "text": "5.2 Communicate Metrics & Plots\nWhen communicating with decision-makers, translate abstract metrics into a narrative that informs real-world policy or adaptation.\n\nUse the Risk Ratio for Likelihood: Instead of saying “RR = 10,” tell stakeholders the event is “10 times more likely” due to the causal factor.\nUse FAR for Responsibility: Instead of saying “FAR = 0.90”, use the Fraction of Attributable Risk to explain what proportion of the risk is directly linked to human behavior.\nClarify Causality: Explicitly state whether the factor was a “necessary” trigger, but be careful to note if it was not “sufficient” to cause the event on its own. You may need to use an additional example (such as the fuel and fire example in the Key Terms section) to explain the difference between necessary and sufficient causation.\n\nWhen presenting the plot, do not assume the audience understands probability density. Use the following translation strategies:\n\nDefine the “Hill”: Explain that the “hill” represents where the variable (e.g., temperature) spends most of its time. The higher the peak, the more common that value is.\nThe “Shift” Narrative: Describe the movement of the factual curve as the “new normal.” Instead of saying “the mean shifted,” say “the entire climate has moved into warmer territory, pushing the whole curve with it.”\nFocus on the “Tail”: Direct their eyes to the far right of the plot. Explain that while the middle of the “hill” moved a little, the “tail” (the extreme zone) grew significantly. This helps them understand why a small change in average temperature leads to a massive change in disaster frequency.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizing & Communicating Results</span>"
     ]
   },
   {
@@ -184,7 +224,7 @@
     "href": "troubleshooting.html",
     "title": "6  Troubleshooting & Evaluation",
     "section": "",
-    "text": "Self-Check List: A set of “Follow-up Questions” for the user (e.g., Is the threshold high enough? Is the distribution model honest?).\nProduct Evaluation: Criteria to ensure the final conclusion correctly distinguishes between necessary and sufficient causes.",
+    "text": "6.1 Common Technical Errors\nEven with the right formulas, technical hurdles or “nonsensical” results can occur. Use this guide to debug your code and validate your findings.\nIf you encounter issues while running your R code, refer to the table below for common symptoms and solutions.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting & Evaluation</span>"
     ]
@@ -241,6 +281,46 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Task Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "visuals.html#answer-the-question",
+    "href": "visuals.html#answer-the-question",
+    "title": "5  Visualizing & Communicating Results",
+    "section": "5.3 Answer the Question",
+    "text": "5.3 Answer the Question\nIn the introduction of this user guide, we set out to be able to answer the question: “How much did a specific factor increase the risk of an event?”. Now that we know how to calculate, visualize, and communicate statistical metrics, we can provide a concrete answer.\n\n\n\n\n\n\nTipExample\n\n\n\nUsing our example of extreme heat events from above:\n\nQuestion: “How much did human-induced influence (the causal factor) increase the risk of an extreme heat event exceeding 25°C?“\nResults: We observed that the factual world (with human-induced warming) produced a \\(p_1\\) of 0.055, while the natural, counterfactual world produced a \\(p_0\\) of only 0.003. From \\(p_1\\) and \\(p_2\\), we calculated a Risk Ratio of 18.3 and a Fraction of Attributable Risk of 0.95.\nConclusion: The human-induced causal factor made extreme heat events \\(&gt;\\) 25\\(\\degree\\)C 18.3 times more likely to occur. Additionally, our results indicate that 95% of the risk of exceeding the 25\\(\\degree\\)C threshold is directly attributable to the human-induced causal factor.\n\nNote: our application of causal logic could also be added to the Conclusion for a deeper interpretation of the results.\n\n\n\n\n\n\n\nFrost, Jim. 2022. “Probability Density Function: Definition & Uses. Statistics by Jim.” August 28, 2022. https://statisticsbyjim.com/probability/probability-density-function/.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizing & Communicating Results</span>"
+    ]
+  },
+  {
+    "objectID": "troubleshooting.html#common-technical-errors",
+    "href": "troubleshooting.html#common-technical-errors",
+    "title": "6  Troubleshooting & Evaluation",
+    "section": "",
+    "text": "Error Message\nLikely Cause\nSolution\n\n\n\n\nError: object 'p1' not found\nVariable sequence error.\nEnsure the code chunk that calculates p1 and p0 is placed above the text or table where you call them.\n\n\nRR = Inf\nThe “Zero \\(p_0\\)” problem.\nYour threshold \\(u\\) is so high that the event never occurred in the natural world. Increase your sample size (n) or slightly lower your threshold.\n\n\nWarning: Removed k rows\nData out of bounds.\nYour threshold \\(u\\) is set outside the range of your actual data points. Check your data range using summary(data).\n\n\n\n\n\n\n\n\n\nImportantA Note on Infinity (Inf)\n\n\n\nIn attribution science, a Risk Ratio of Inf (Infinity) occurs when \\(p_0\\) is 0. While this suggests the event was “impossible” without human influence, it is usually a sign that your sample size is too small to capture rare natural events. Try increasing your simulation sample size for more stable results.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting & Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "troubleshooting.html#statistical-sanity-check",
+    "href": "troubleshooting.html#statistical-sanity-check",
+    "title": "6  Troubleshooting & Evaluation",
+    "section": "6.2 Statistical Sanity Check",
+    "text": "6.2 Statistical Sanity Check\nBefore you publish your results, perform a “Sanity Check” to ensure the logic holds up. If your results look like the examples below, you may need to re-evaluate your model:\n\nIs \\(p_1\\) smaller than \\(p_0\\)?: In a warming world example, the factual probability should be higher. If \\(p_1 &lt; p_0\\), check if you accidentally swapped your data labels or if you are studying a variable that should be decreasing (like extreme cold).\nIs the Risk Ratio (RR) exactly 1?: This means the causal factor had zero impact. While possible, double-check that your “Factual” and “Counterfactual” datasets aren’t actually identical.\nIs the FAR negative?: A negative Fraction of Attributable Risk suggests the factor reduced the risk. If you are studying human-induced warming and heatwaves, a negative FAR usually indicates a calculation error in the formula \\(1 - (p_0 / p_1)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting & Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "troubleshooting.html#the-so-what-test",
+    "href": "troubleshooting.html#the-so-what-test",
+    "title": "6  Troubleshooting & Evaluation",
+    "section": "6.3 The “So What?” Test",
+    "text": "6.3 The “So What?” Test\nFinally, evaluate the communicative value of your result. Ask yourself:\n\n“If I tell a policymaker that an event is 1.2 times more likely, is that a meaningful change, or is it within the noise of natural variability?”\n\nAttribution is most powerful when the results are distinct enough to drive action. If your results are borderline, consider if your threshold \\(u\\) is truly capturing an “extreme” or just a “heavy” event.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting & Evaluation</span>"
     ]
   }
 ]

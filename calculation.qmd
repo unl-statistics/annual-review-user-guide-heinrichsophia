@@ -27,4 +27,48 @@ $$RR = \frac{p_1}{p_0}$$
     -   A RR $=$ 2.0 means the event is **twice as likely** to occur in the factual world compared to the counterfactual world.
     -   A RR $=$ 1.0 indicates that the causal factor had **no impact** on the likelihood of the event.
     -   A RR $\le$ 1.0 indicates the causal factor **decreased** the likelihood of the event.
+    
+::: callout-tip
 
+# Example
+
+Continuing with our synthetic 25°C threshold data, we can calculate these metrics in R using the variables we defined in the Estimation step.
+
+```{r}
+#| label: estimate-probabilities
+#| include: false
+
+# 1. Generate Synthetic Data (The "Worlds")
+set.seed(349)
+counterfactual_data <- rnorm(1000, mean = 20, sd = 2) # Cooler "Natural" World
+factual_data <- rnorm(1000, mean = 22, sd = 2) # Warmer "Current" World
+threshold <- 25
+
+# 2. Define the threshold
+u <- 25
+
+# 3. Calculate Probabilities
+p1 <- mean(factual_data >= u)
+p0 <- mean(counterfactual_data >= u)
+```
+
+```{r}
+#| label: calculate-metrics
+#| echo: true
+
+# 1. Calculate Risk Ratio
+risk_ratio <- p1 / p0
+
+# 2. Calculate Fraction of Attributable Risk
+far <- 1 - (p0 / p1)
+
+# Display results
+cat("Risk Ratio (RR):", round(risk_ratio, 2), "\n")
+cat("Fraction of Attributable Risk (FAR):", round(far, 2))
+```
+
+**Interpretation: **
+
+-   **RR**: The causal factor has made an extreme heat event above 25°C **`r risk_ratio`** times more likely to occur compared to the natural world.
+-   **FAR**: We can conclude that **`r round(far,2)*100`%** of the risk of this heat event was contributed by the causal factor, while only **`r round(1-far,2)*100`%** was due to natural internal variability.
+:::

@@ -14,7 +14,7 @@ Before applying any statistical models, you must first identify the specific ext
 
 -   **Verify Data Availability**: Ensure that historical records or climate models exist for this specific event type in both the factual and counterfactual scenarios.
 
-::: callout-tip
+::: callout-note
 ## Where does Counterfactual Data come from?
 
 Because the counterfactual world is a "what if" scenario, its data cannot be "real" in the sense of being currently observed. For climate events, it is generally obtained in one of two ways:
@@ -25,11 +25,36 @@ Because the counterfactual world is a "what if" scenario, its data cannot be "re
 
 ## Threshold Selection ($u$)
 
-Once you have selected the type of event, you must set a benchmark for what qualifies as "rare":
+Once you have selected the type of event, you must set a benchmark for what qualifies as a "rare" occurrence of that event:
 
--   **Identify the Benchmark**: Choose a value ($u$) such that any observation $X > u$ is considered an extreme occurrence. (e.g., rainfall in North America over 4 hours $>$ 10 inches)
+-   **Identify the Benchmark**: Choose a value ($u$) such that any observation $X > u$ is considered an extreme occurrence. (e.g., Event of interest: rainfall in North America over 4 hours, Threshold: $>$ 10 inches of rain)
 
 -   **Balance Your Data**: Avoid setting $u$ so high that you lack enough data points for statistical validity, but keep it high enough to remain in the "tail" of the distribution.
+
+```{r}
+#| label: fig-threshold-comparison
+#| fig-cap: "Threshold selection: Too Low (Left), Just Right (Middle), Too High (Right)"
+#| fig-subcap: ["Too Low: Not Extreme","Just Right: Statistical Balance","Too High: Not Enough Data"]
+#| layout-ncol: 3
+#| echo: false
+
+library(ggplot2)
+
+set.seed(123)
+df <- data.frame(val = rnorm(1000))
+
+plot_u <- function(u) {
+  ggplot(df, aes(x = val)) +
+    geom_density(fill = "grey", alpha = 0.3) +
+    geom_vline(xintercept = u, color = "red", linetype = "dashed", linewidth=1.5) +
+    labs(x = "", y = "") +
+    theme_minimal()
+}
+
+plot_u(-0.5)
+plot_u(2.0)
+plot_u(4.0)
+```
 
 ## Boundaries
 
@@ -40,3 +65,17 @@ Define the specific limits of the event to ensure your analysis is contained and
 -   **Spatial Extent**: Determine the geographic boundaries, such as a specific postal code, a watershed, or a continental region.
 
 -   **Maintain Consistency**: Apply these exact boundaries to both your **factual** and **counterfactual** datasets to ensure a valid comparison.
+
+::: callout-tip
+# Example
+
+Below is an example of a defined event.
+
+-   **Event Type**: Extreme Heat Temperatures
+-   **Threshold** ($u$): $u > 25\degree C$ ; i.e., extreme heat events above $25\degree C$ are considered "rare"
+-   **Boundaries**:
+    -   **Spatial**: A localized region (e.g., "Region A") representing a specific urban or agricultural area.
+    -   **Temporal**: The summer season (June–August).
+
+We will follow this example throughout the rest of the user guide.
+:::
