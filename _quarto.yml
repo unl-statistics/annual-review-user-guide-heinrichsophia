@@ -11,7 +11,7 @@ book:
   title: "How to Calculate and Communicate Extreme Event Attribution"
   author: "Sophia Heinrich"
   page-footer:
-    left: "Copyright 2026, Sohia Heinrich"
+    left: "Copyright 2026, Sophia Heinrich"
   chapters:
     - index.qmd
     - prep.qmd
