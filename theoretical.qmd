@@ -68,7 +68,7 @@ Summary of Attribution Metrics
 
 Because the FAR is `r round(far,2)`, the **Probability of Necessary Causation** is `r round(far,2)*100`%.
 
--   **Interpretation**: There is a `r round(far,2)*100`% likelihood that an extreme heat event $> `r threshold`\degree C$ would **not** have occurred without the influence of human-induced climate change. The causal factor was a "necessary" trigger for the event to reach this magnitude.
+-   **Interpretation**: There is a `r round(far,2)*100`% likelihood that an extreme heat event $> `r threshold`^\circ C$ would **not** have occurred without the influence of human-induced climate change. The causal factor was a "necessary" trigger for the event to reach this magnitude.
 
 #### Evaluate Sufficiency (PS) {.unnumbered}
 
@@ -76,5 +76,5 @@ Using the probabilities above, we calculate the **Probability of Sufficient Caus
 
 -   **Calculation**: $PS = 1 - \frac{1 - `r p1`}{1 - `r p0`} = 1 - \frac{`r 1 - p1`}{`r 1 - p0`} \approx `r 1 - (1 - p1)/ (1 - p0)`$
 
--   **Interpretation**: The PS is only `r round((1 - (1 - p1)/(1 - p0)),3)*100`%. This means that while human influence made an extreme heat event $> `r threshold`\degree C$ much more likely, it was not "sufficient" to guarantee the event on its own; other natural factors still had to align.
+-   **Interpretation**: The PS is only `r round((1 - (1 - p1)/(1 - p0)),3)*100`%. This means that while human influence made an extreme heat event $> `r threshold`^\circ C$ much more likely, it was not "sufficient" to guarantee the event on its own; other natural factors still had to align.
 :::
