@@ -1,0 +1,14 @@
+# Sophia
+
+- \degree isn't valid latex - you need ^\circ instead. So to get it to compile I had to replace all \degree calls in 3 of your qmd files.
+
+
+- in Prep & Prereqs, you have a merge conflict that shows up in your data consistency notice (and it shows my comment) - please make sure to proofread the compiled version before you turn things in!
+
+
+- Concrete examples usually help -- maybe something like Hurricane Ike or Sandy? Or the lack of snowfall in the Mountain west in 2026?
+
+- I'm not sure why there isn't a next arrow from ch5 to ch6, but ????
+
+- I think there are other risk communication graphics that may be useful here, but the graphics that you did include work fine too -- it's just more fun to explore other options as well. You could even use uncertainty visualization to get a handle on whether something is directly attributable or not (ggdibler package). :)
+
