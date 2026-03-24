@@ -72,7 +72,7 @@ Define the specific limits of the event to ensure your analysis is contained and
 Below is an example of a defined event.
 
 -   **Event Type**: Extreme Heat Temperatures
--   **Threshold** ($u$): $u > 25\degree C$ ; i.e., extreme heat events above $25\degree C$ are considered "rare"
+-   **Threshold** ($u$): $u > 25^\circ C$ ; i.e., extreme heat events above $25^\circ C$ are considered "rare"
 -   **Boundaries**:
     -   **Spatial**: A localized region (e.g., "Region A") representing a specific urban or agricultural area.
     -   **Temporal**: The summer season (June–August).
