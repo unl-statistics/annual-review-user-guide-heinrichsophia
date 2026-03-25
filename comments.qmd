@@ -1,10 +1,18 @@
 # Sophia
 
+ADDRESSED:
+
 - \degree isn't valid latex - you need ^\circ instead. So to get it to compile I had to replace all \degree calls in 3 of your qmd files.
+
+Fix: Apologies for this, and thanks for fixing them! When I viewed the local compiled version, it looked good. I've fixed any the remaining placees where this occurred.
 
 
 - in Prep & Prereqs, you have a merge conflict that shows up in your data consistency notice (and it shows my comment) - please make sure to proofread the compiled version before you turn things in!
 
+Fix: Merge conflicts should hopefully be fixed now!
+
+
+NOT ADDRESSED:
 
 - Concrete examples usually help -- maybe something like Hurricane Ike or Sandy? Or the lack of snowfall in the Mountain west in 2026?
 
