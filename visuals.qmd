@@ -132,11 +132,11 @@ In the introduction of this user guide, we set out to be able to answer the ques
 
 Using our example of extreme heat events from above:
 
--   **Question**: "*How much did human-induced influence (the causal factor) increase the risk of an extreme heat event exceeding 25°C*?*"*
+-   **Question**: "*How much did human-induced influence (the causal factor) increase the risk of an extreme heat event exceeding  $`r threshold`^\circ C$*?*"*
 
 -   **Results**: We observed that the factual world (with human-induced warming) produced a $p_1$ of `r p1`, while the natural, counterfactual world produced a $p_0$ of only `r p0`. From $p_1$ and $p_2$, we calculated a Risk Ratio of `r round(p1/p0, 1)` and a Fraction of Attributable Risk of `r round(1 - (p0/p1), 2)`.
 
--   **Conclusion**: The human-induced causal factor made extreme heat events $>$ `r threshold`$^\circ$C **`r round(p1/p0, 1)` times more likely** to occur. Additionally, our results indicate that **`r round((1 - (p0/p1)) * 100, 0)`%** of the risk of exceeding the `r threshold`$^\circ$C threshold is directly attributable to the human-induced causal factor.\
+-   **Conclusion**: The human-induced causal factor made extreme heat events $>$ $`r threshold`^\circ$C **`r round(p1/p0, 1)` times more likely** to occur. Additionally, our results indicate that **`r round((1 - (p0/p1)) * 100, 0)`%** of the risk of exceeding the $`r threshold`^\circ$C threshold is directly attributable to the human-induced causal factor.\
     \
     *Note: our application of causal logic could also be added to the Conclusion for a deeper interpretation of the results.*
 :::

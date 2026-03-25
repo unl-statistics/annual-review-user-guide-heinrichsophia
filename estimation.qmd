@@ -49,7 +49,7 @@ cat("Counterfactual Probability (p0):", p0)
 
 **Interpretation: **
 
--   **Factual Probability ($p_1$) **: There is a **`r p1*100`%** chance of an event exceeding 25°C in our current, factual world (which is affected by the causal factor of human influence).
+-   **Factual Probability ($p_1$) **: There is a **`r p1*100`%** chance of an event exceeding $25^\circ C$ in our current, factual world (which is affected by the causal factor of human influence).
 -   **Counterfactual Probability ($p_0$)**: There is only a **`r p0*100`%** chance of this event occurring in the natural, counterfactual world.
 :::
 
